@@ -1,0 +1,5 @@
+# .autotest
+Autotest.add_hook :initialize do |at|
+  # Log directory is causing cucumber to run infinitely.
+	  at.add_exception(%r{^\./log})
+		end
