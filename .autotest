@@ -1,6 +1,20 @@
 Autotest.add_hook :initialize do |autotest|
+	# Hack for, I believe, Spork testing
 	autotest.add_mapping(%r%^spec/(requests)/.*rb$%) do |filename,_|
 		filename
 	end
-	autotest.add_exception(%r{^\./log})
+
+	# Kludge to fix infinitely looping autotest
+	dont_test_these = %w[ body code-to-remember config config.ru db doc Gemfile
+												Gemfile.lock log Rakefile README tmp vendor webrat.log ]
+	dont_test_these.each do |item|
+		autotest.add_exception( %r{^\./#{item}}) 
+	end
+
+=begin A better way, except that it doesn't work.
+	things_to_test = %w[app lib public script spec]
+	%x[ls .].each do |item|
+		autotest.add_exception( %r{^\./#{item}}) unless things_to_test.member?( item )
+	end
+=end
 end
