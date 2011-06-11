@@ -16,3 +16,4 @@ abbr tt @title
 
 " For general use?
 map  :sp .exrc
+ab bef before(:each) do 
