@@ -1,0 +1,2631 @@
+reason:/$ cd
+reason:~$ man googlecl
+No manual entry for googlecl
+reason:~$ googlecl
+googlecl: command not found
+reason:~$ man google
+No manual entry for google
+See 'man 7 undocumented' for help when manual pages are not available.
+reason:~$ in
+reason:~$ ls .exrc_files/
+rubyrc  txtrc
+reason:~$ la *rc
+ls: cannot access *rc: No such file or directory
+reason:~$ la ./*rc
+ls: cannot access ./*rc: No such file or directory
+reason:~$ la |grep rc$
+-rw-r--r--  1 tom  tom  1.3K 2011-06-07 17:26 .bashrc
+-rw-r--r--  1 tom  tom    51 2011-02-22 08:16 .blackboxrc
+-rw-r--r--  1 tom  tom    55 2011-06-10 14:48 .dmrc
+-rw-r--r--  1 tom  tom   647 2011-05-26 23:17 .exrc
+-rw-r--r--  1 tom  tom   380 2011-06-02 11:34 .gvimrc
+-rw-r--r--  1 tom  tom    41 2010-04-04 13:08 .inputrc
+-rw-r--r--  1 tom  tom    64 2011-06-01 10:00 .rvmrc
+-rw-r--r--  1 tom  tom   158 2010-07-28 12:46 .vimperatorrc
+-rw-r--r--  1 tom  tom  1.2K 2011-06-10 02:11 .vimrc
+reason:~$ mv .exrc_files/* .
+reason:~$ la |grep rc$
+-rw-r--r--  1 tom  tom  1.3K 2011-06-07 17:26 .bashrc
+-rw-r--r--  1 tom  tom    51 2011-02-22 08:16 .blackboxrc
+-rw-r--r--  1 tom  tom    55 2011-06-10 14:48 .dmrc
+-rw-r--r--  1 tom  tom   647 2011-05-26 23:17 .exrc
+-rw-r--r--  1 tom  tom   380 2011-06-02 11:34 .gvimrc
+-rw-r--r--  1 tom  tom    41 2010-04-04 13:08 .inputrc
+-rw-r--r--  1 tom  tom   882 2011-05-26 22:13 rubyrc
+-rw-r--r--  1 tom  tom    64 2011-06-01 10:00 .rvmrc
+-rw-r--r--  1 tom  tom   588 2011-05-26 22:01 txtrc
+-rw-r--r--  1 tom  tom   158 2010-07-28 12:46 .vimperatorrc
+-rw-r--r--  1 tom  tom  1.2K 2011-06-10 02:11 .vimrc
+reason:~$ mv rubyrc .rbrc
+reason:~$ mv txtrc .txtrc
+reason:~$ rmdir .exrc
+rmdir: failed to remove `.exrc': Not a directory
+reason:~$ rmdir .exrc_files/
+reason:~$ vim
+reason:~$ vim
+reason:~$ la|grep map
+-rw-r--r--  1 tom  tom   459 2011-06-10 02:11 .map
+-rw-r--r--  1 tom  tom   291 2011-06-01 23:41 .rbmap
+-rw-r--r--  1 tom  tom     0 2011-06-01 22:45 .txtmap
+-rw-r--r--  1 tom  tom    77 2011-06-07 17:31 .xmodmap
+reason:~$ la|grep map>shared-config
+reason:~$ la|grep rc$>>shared-config
+reason:~$ echo .PersonalBrain/ >> shared-config 
+reason:~$ echo .PersonalBrain/ >> shared-config 
+lecho .PersonalBrain/ >> shared-config 
+reason:~$ 
+im
+reason:~$ vim shared-config 
+reason:~$ vim .gvimrc
+reason:~$ grep ~/.vimrc cmd
+grep: cmd: No such file or directory
+reason:~$ grep ~/.vimrc cmd
+lgrep cmd ~/.vimrc 
+set shellcmdflag=-ic
+autocmd CursorMovedI * call CheckFileType()
+	"stop the autocmd if detected, or above count threshold
+		autocmd! newFileDetection
+reason:~$ vim shared-config 
+
+[No write since last change]
+mareason:~$ man ln
+reason:~$ exit
+reason:~$ cd
+reason:~$ ls .map
+.map
+reason:~$ mv .map .vimmap
+reason:~$ vim .vimrc 
+Error detected while processing /home/tom/.vimrc:
+line   33:
+E484: Can't open file /home/tom/.map
+Press ENTER or type command to continue
+reason:~$ vim
+reason:~$ ruby shared-config 
+ln: target `.PersonalBrain/' is not a directory: No such file or directory
+ln: target `.vim/' is not a directory: No such file or directory
+ln: target `.vimperator/' is not a directory: No such file or directory
+mv: `.inputrc' and `/home/tom/Dropbox/.inputrc' are the same file
+ln: replace `.inputrc'? mv: `.rvmrc' and `/home/tom/Dropbox/.rvmrc' are the same file
+ln: replace `.rvmrc'? n
+reason:~$ ls
+code@       Dropbox/  irbrc-dont-work@  scripts-in-progress/  terminal.rb               writing@
+Desktop/    exo@      lf5@              share/                test-example-for-tzim.rb
+Downloads/  gnome     Public@           shared-config         todos
+reason:~$ la
+total 548K
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .adobe/
+drwxr-xr-x  5 tom  tom  4.0K 2011-01-31 13:25 .anki/
+drwx------  2 tom  tom  4.0K 2011-06-01 10:02 .aptitude/
+-rw-r--r--  1 tom  tom   165 2011-06-01 11:47 .autotest
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_aliases -> /home/tom/Dropbox/.bash_aliases
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_history -> /home/tom/Dropbox/.bash_history
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:09 .bash_logout -> /home/tom/Dropbox/.bash_logout
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_profile -> /home/tom/Dropbox/.bash_profile
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .bashrc -> /home/tom/Dropbox/.bashrc
+lrwxrwxrwx  1 tom  tom    29 2011-06-11 12:09 .blackboxrc -> /home/tom/Dropbox/.blackboxrc
+drwxr-xr-x  5 tom  tom  4.0K 2010-04-12 00:05 .blender/
+drwx------ 18 tom  tom  4.0K 2011-05-15 16:12 .cache/
+lrwxrwxrwx  1 tom  tom    13 2011-05-25 18:06 code -> writing/code//
+drwx------  3 tom  tom  4.0K 2010-05-19 18:27 .compiz/
+drwxr-xr-x 29 tom  tom  4.0K 2011-03-02 10:35 .config/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .dbus/
+drwxr-xr-x  2 tom  tom  4.0K 2011-02-04 15:53 .debtags/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 14:59 Desktop/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .dmrc -> /home/tom/Dropbox/.dmrc
+-rw-r--r--  1 tom  tom    58 2011-06-07 17:27 .dmrc.bak
+drwx------  4 tom  tom  4.0K 2011-06-09 11:53 Downloads/
+drwx------  3 tom  tom  4.0K 2011-06-11 12:09 .dropbox/
+drwx------ 18 tom  tom  4.0K 2011-06-11 12:10 Dropbox/
+drwxr-xr-x  5 tom  tom  4.0K 2011-05-25 14:29 .dropbox-dist/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 15:00 .dropbox-dist-new/
+drwx------  6 tom  tom  4.0K 2011-06-11 12:09 .e16/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-04 11:46 .Ephox/
+drwxr-xr-x  5 tom  tom  4.0K 2010-11-26 14:04 .eric4/
+-rw-------  1 tom  tom    16 2010-02-27 02:22 .esd_auth
+drwxr-xr-x  8 tom  tom  4.0K 2010-02-27 14:07 .evolution/
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 exo -> /home/tom/Dropbox/exo/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .exrc -> /home/tom/Dropbox/.exrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-03-01 16:27 .FBReader/
+drwxr-xr-x  2 tom  tom  4.0K 2010-04-17 14:39 .flux/
+drwxr-xr-x  5 tom  tom  4.0K 2011-04-12 15:46 .fluxbox/
+-rw-r--r--  1 tom  tom   116 2011-05-18 11:50 .fold
+drwxr-xr-x  2 tom  tom  4.0K 2011-04-28 00:58 .fontconfig/
+drwx------  5 tom  tom  4.0K 2011-06-10 14:48 .gconf/
+drwx------  2 tom  tom  4.0K 2011-06-11 11:54 .gconfd/
+drwx------  4 tom  tom  4.0K 2010-08-03 12:19 .gegl-0.0/
+drwxr-xr-x  4 tom  tom  4.0K 2011-05-13 13:40 .gem/
+drwxr-xr-x 22 tom  tom  4.0K 2011-04-19 12:33 .gimp-2.6/
+drwxr-xr-x  8 tom  tom  4.0K 2011-05-19 09:43 .git/
+lrwxrwxrwx  1 tom  tom    28 2011-06-11 12:09 .gitconfig -> /home/tom/Dropbox/.gitconfig
+-rw-r--r--  1 tom  tom   843 2010-12-18 20:03 .gitk
+-rw-r-----  1 tom  tom     0 2011-05-30 15:05 .gksu.lock
+drwxr--r--  3 tom  tom  4.0K 2010-12-15 02:38 .glipper/
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:44 gnome
+drwx------ 15 tom  tom  4.0K 2011-06-11 11:54 .gnome2/
+drwx------  2 tom  tom  4.0K 2010-02-27 02:22 .gnome2_private/
+drwxr-xr-x  3 tom  tom  4.0K 2010-03-29 16:47 .gnote/
+drwx------  2 tom  tom  4.0K 2011-01-15 13:05 .gnupg/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-07 17:30 .gstreamer-0.10/
+-rw-r--r--  1 tom  tom   283 2011-05-30 15:05 .gtk-bookmarks
+dr-x------  2 tom  tom     0 2011-06-10 14:48 .gvfs/
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .gvimrc -> /home/tom/Dropbox/.gvimrc
+drwxr-----  2 tom  tom  4.0K 2010-12-13 23:23 .hplip/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-16 18:07 .i4j_jres/
+-rwxr-xr-x  1 tom  tom  1.1K 2010-08-28 14:43 .iat.vim*
+-rw-------  1 tom  tom   97K 2011-06-10 14:48 .ICEauthority
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-28 16:30 .icons/
+lrwxrwxrwx  1 tom  tom    26 2011-06-11 12:09 .inputrc -> /home/tom/Dropbox/.inputrc
+-rw-r--r--  1 tom  tom   294 2010-10-11 15:13 .install4j
+drwxr-sr-x  3 tom  tom  4.0K 2011-05-08 23:31 .ipython/
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:10 .irb-history -> /home/tom/Dropbox/.irb-history
+lrwxrwxrwx  1 tom  tom    33 2011-06-11 12:09 irbrc-dont-work -> /home/tom/Dropbox/irbrc-dont-work
+-rw-r--r--  1 tom  tom   694 2010-03-22 12:28 .isomaster
+drwxr-xr-x  4 tom  tom  4.0K 2010-07-02 14:26 .java/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-11 22:54 .kde/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:23 .kodos/
+-rw-------  1 tom  tom   750 2011-06-02 01:55 .lesshst
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 lf5 -> /home/tom/Dropbox/lf5/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .local/
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .macromedia/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-23 11:36 .matplotlib/
+drwx------  3 tom  tom  4.0K 2010-02-27 14:06 .mission-control/
+drwx------  4 tom  tom  4.0K 2010-02-27 12:54 .mozilla/
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 12:53 .nautilus/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-07 23:19 .openoffice.org/
+drwxr-xr-x  2 tom  tom  4.0K 2010-08-14 13:49 .pip/
+drwx------  3 tom  tom  4.0K 2010-03-29 16:58 .pki/
+-rw-------  1 tom  tom   12K 2010-03-10 10:10 .polymaths.txt.swp
+-rw-r--r--  1 tom  tom    37 2010-06-10 13:45 .printer-groups.xml
+-rw-r--r--  1 tom  tom   715 2011-01-09 14:20 .profile
+-rw-r--r--  1 tom  tom   675 2011-01-02 12:46 .profile.bak
+lrwxrwxrwx  1 tom  tom    24 2011-04-19 13:25 Public -> /home/tom/Dropbox/Public/
+drwx------  2 tom  tom  4.0K 2011-06-10 14:48 .pulse/
+-rw-------  1 tom  tom   256 2010-02-27 02:22 .pulse-cookie
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:21 .qt/
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .rbmap -> /home/tom/Dropbox/.rbmap
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .rbrc -> /home/tom/Dropbox/.rbrc
+-rw-------  1 tom  tom  8.8K 2011-06-11 11:54 .recently-used.xbel
+drwxr-xr-x 24 tom  tom  4.0K 2011-06-01 10:05 .rvm/
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .rvmrc -> /home/tom/Dropbox/.rvmrc
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-10 15:09 scripts-in-progress/
+drwxr-xr-x  3 tom  tom  4.0K 2011-06-01 09:59 share/
+-rw-r--r--  1 tom  tom   469 2011-06-11 12:08 shared-config
+drwxr-xr-x  3 tom  tom  4.0K 2010-10-19 18:42 .shutter/
+drwx------  2 tom  tom  4.0K 2011-05-13 18:34 .ssh/
+-rw-r--r--  1 tom  tom     0 2010-02-27 10:24 .sudo_as_admin_successful
+-rw-------  1 tom  tom   16K 2011-06-07 17:24 .swm
+-rw-------  1 tom  tom   12K 2011-05-22 14:39 .swn
+-rw-------  1 tom  tom   12K 2010-03-13 10:40 .swo
+-rw-------  1 tom  tom   12K 2010-03-12 06:59 .swp
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:45 terminal.rb
+-rw-r--r--  1 tom  tom   204 2011-06-10 15:16 test-example-for-tzim.rb
+drwxr-xr-x  3 tom  tom  4.0K 2010-02-28 16:31 .themes/
+drwxr-xr-x  5 tom  tom  4.0K 2010-02-28 16:12 .thumbnails/
+-rw-r--r--  1 tom  tom   417 2011-05-17 15:44 todos
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .txtmap -> /home/tom/Dropbox/.txtmap
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .txtrc -> /home/tom/Dropbox/.txtrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 10:23 .update-manager-core/
+drwx------  2 tom  tom  4.0K 2010-03-15 13:44 .update-notifier/
+-rw-------  1 root root 4.6K 2011-06-07 17:23 .viminfo
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .vimmap -> /home/tom/Dropbox/.vimmap
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .vimperatorrc -> /home/tom/Dropbox/.vimperatorrc
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .vimrc -> /home/tom/Dropbox/.vimrc
+lrwxrwxrwx  1 tom  tom    25 2011-04-19 13:26 writing -> /home/tom/Dropbox/writing/
+-rw-r--r--  1 tom  tom    77 2011-06-07 17:31 .xmodmap
+-rw-r--r--  1 tom  tom   448 2011-01-06 03:25 .xrced
+-rw-------  1 tom  tom     0 2011-01-03 15:39 .xsel.log
+-rw-------  1 tom  tom   11K 2011-06-11 11:50 .xsession-errors
+-rw-------  1 tom  tom  5.1K 2011-06-10 13:50 .xsession-errors.old
+reason:~$ vim .txt
+reason:~$ vim .txtmap 
+reason:~$ vim .txtrc 
+reason:~$ vim .vimmap 
+reason:~$ vim
+reason:~$ ls .PersonalBrain
+ls: cannot access .PersonalBrain: No such file or directory
+reason:~$ ls /home/tom/Dropbox/.PersonalBrain/
+accelerators.csv  info6.bin                 TheBrain5Preferences.xml  themes/
+brains.guidmap    templates/                TheBrain6Preferences.bak
+info5.bin         TheBrain5Preferences.bak  TheBrain6Preferences.xml
+reason:~$ ln -i --symbolic /home/tom/Dropbox/.PersonalBrain/ .PersonalBrain/
+ln: target `.PersonalBrain/' is not a directory: No such file or directory
+reason:~$ ln -i --symbolic /home/tom/Dropbox/.PersonalBrain .PersonalBrain
+reason:~$ la
+total 552K
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .adobe/
+drwxr-xr-x  5 tom  tom  4.0K 2011-01-31 13:25 .anki/
+drwx------  2 tom  tom  4.0K 2011-06-01 10:02 .aptitude/
+-rw-r--r--  1 tom  tom   165 2011-06-01 11:47 .autotest
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_aliases -> /home/tom/Dropbox/.bash_aliases
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_history -> /home/tom/Dropbox/.bash_history
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:09 .bash_logout -> /home/tom/Dropbox/.bash_logout
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_profile -> /home/tom/Dropbox/.bash_profile
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .bashrc -> /home/tom/Dropbox/.bashrc
+lrwxrwxrwx  1 tom  tom    29 2011-06-11 12:09 .blackboxrc -> /home/tom/Dropbox/.blackboxrc
+-rw-r--r--  1 tom  tom   163 2011-06-11 12:20 blah
+drwxr-xr-x  5 tom  tom  4.0K 2010-04-12 00:05 .blender/
+drwx------ 18 tom  tom  4.0K 2011-05-15 16:12 .cache/
+lrwxrwxrwx  1 tom  tom    13 2011-05-25 18:06 code -> writing/code//
+drwx------  3 tom  tom  4.0K 2010-05-19 18:27 .compiz/
+drwxr-xr-x 29 tom  tom  4.0K 2011-03-02 10:35 .config/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .dbus/
+drwxr-xr-x  2 tom  tom  4.0K 2011-02-04 15:53 .debtags/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 14:59 Desktop/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .dmrc -> /home/tom/Dropbox/.dmrc
+-rw-r--r--  1 tom  tom    58 2011-06-07 17:27 .dmrc.bak
+drwx------  4 tom  tom  4.0K 2011-06-09 11:53 Downloads/
+drwx------  3 tom  tom  4.0K 2011-06-11 12:21 .dropbox/
+drwx------ 18 tom  tom  4.0K 2011-06-11 12:10 Dropbox/
+drwxr-xr-x  5 tom  tom  4.0K 2011-05-25 14:29 .dropbox-dist/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 15:00 .dropbox-dist-new/
+drwx------  6 tom  tom  4.0K 2011-06-11 12:09 .e16/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-04 11:46 .Ephox/
+drwxr-xr-x  5 tom  tom  4.0K 2010-11-26 14:04 .eric4/
+-rw-------  1 tom  tom    16 2010-02-27 02:22 .esd_auth
+drwxr-xr-x  8 tom  tom  4.0K 2010-02-27 14:07 .evolution/
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 exo -> /home/tom/Dropbox/exo/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .exrc -> /home/tom/Dropbox/.exrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-03-01 16:27 .FBReader/
+drwxr-xr-x  2 tom  tom  4.0K 2010-04-17 14:39 .flux/
+drwxr-xr-x  5 tom  tom  4.0K 2011-04-12 15:46 .fluxbox/
+-rw-r--r--  1 tom  tom   116 2011-05-18 11:50 .fold
+drwxr-xr-x  2 tom  tom  4.0K 2011-04-28 00:58 .fontconfig/
+drwx------  5 tom  tom  4.0K 2011-06-10 14:48 .gconf/
+drwx------  2 tom  tom  4.0K 2011-06-11 11:54 .gconfd/
+drwx------  4 tom  tom  4.0K 2010-08-03 12:19 .gegl-0.0/
+drwxr-xr-x  4 tom  tom  4.0K 2011-05-13 13:40 .gem/
+drwxr-xr-x 22 tom  tom  4.0K 2011-04-19 12:33 .gimp-2.6/
+drwxr-xr-x  8 tom  tom  4.0K 2011-05-19 09:43 .git/
+lrwxrwxrwx  1 tom  tom    28 2011-06-11 12:09 .gitconfig -> /home/tom/Dropbox/.gitconfig
+-rw-r--r--  1 tom  tom   843 2010-12-18 20:03 .gitk
+-rw-r-----  1 tom  tom     0 2011-05-30 15:05 .gksu.lock
+drwxr--r--  3 tom  tom  4.0K 2010-12-15 02:38 .glipper/
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:44 gnome
+drwx------ 15 tom  tom  4.0K 2011-06-11 11:54 .gnome2/
+drwx------  2 tom  tom  4.0K 2010-02-27 02:22 .gnome2_private/
+drwxr-xr-x  3 tom  tom  4.0K 2010-03-29 16:47 .gnote/
+drwx------  2 tom  tom  4.0K 2011-01-15 13:05 .gnupg/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-07 17:30 .gstreamer-0.10/
+-rw-r--r--  1 tom  tom   283 2011-05-30 15:05 .gtk-bookmarks
+dr-x------  2 tom  tom     0 2011-06-10 14:48 .gvfs/
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .gvimrc -> /home/tom/Dropbox/.gvimrc
+drwxr-----  2 tom  tom  4.0K 2010-12-13 23:23 .hplip/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-16 18:07 .i4j_jres/
+-rwxr-xr-x  1 tom  tom  1.1K 2010-08-28 14:43 .iat.vim*
+-rw-------  1 tom  tom   97K 2011-06-10 14:48 .ICEauthority
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-28 16:30 .icons/
+lrwxrwxrwx  1 tom  tom    26 2011-06-11 12:09 .inputrc -> /home/tom/Dropbox/.inputrc
+-rw-r--r--  1 tom  tom   294 2010-10-11 15:13 .install4j
+drwxr-sr-x  3 tom  tom  4.0K 2011-05-08 23:31 .ipython/
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:10 .irb-history -> /home/tom/Dropbox/.irb-history
+lrwxrwxrwx  1 tom  tom    33 2011-06-11 12:09 irbrc-dont-work -> /home/tom/Dropbox/irbrc-dont-work
+-rw-r--r--  1 tom  tom   694 2010-03-22 12:28 .isomaster
+drwxr-xr-x  4 tom  tom  4.0K 2010-07-02 14:26 .java/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-11 22:54 .kde/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:23 .kodos/
+-rw-------  1 tom  tom   750 2011-06-02 01:55 .lesshst
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 lf5 -> /home/tom/Dropbox/lf5/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .local/
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .macromedia/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-23 11:36 .matplotlib/
+drwx------  3 tom  tom  4.0K 2010-02-27 14:06 .mission-control/
+drwx------  4 tom  tom  4.0K 2010-02-27 12:54 .mozilla/
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 12:53 .nautilus/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-07 23:19 .openoffice.org/
+lrwxrwxrwx  1 tom  tom    32 2011-06-11 12:21 .PersonalBrain -> /home/tom/Dropbox/.PersonalBrain/
+drwxr-xr-x  2 tom  tom  4.0K 2010-08-14 13:49 .pip/
+drwx------  3 tom  tom  4.0K 2010-03-29 16:58 .pki/
+-rw-------  1 tom  tom   12K 2010-03-10 10:10 .polymaths.txt.swp
+-rw-r--r--  1 tom  tom    37 2010-06-10 13:45 .printer-groups.xml
+-rw-r--r--  1 tom  tom   715 2011-01-09 14:20 .profile
+-rw-r--r--  1 tom  tom   675 2011-01-02 12:46 .profile.bak
+lrwxrwxrwx  1 tom  tom    24 2011-04-19 13:25 Public -> /home/tom/Dropbox/Public/
+drwx------  2 tom  tom  4.0K 2011-06-10 14:48 .pulse/
+-rw-------  1 tom  tom   256 2010-02-27 02:22 .pulse-cookie
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:21 .qt/
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .rbmap -> /home/tom/Dropbox/.rbmap
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .rbrc -> /home/tom/Dropbox/.rbrc
+-rw-------  1 tom  tom  8.8K 2011-06-11 11:54 .recently-used.xbel
+drwxr-xr-x 24 tom  tom  4.0K 2011-06-01 10:05 .rvm/
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .rvmrc -> /home/tom/Dropbox/.rvmrc
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-10 15:09 scripts-in-progress/
+drwxr-xr-x  3 tom  tom  4.0K 2011-06-01 09:59 share/
+-rw-r--r--  1 tom  tom   469 2011-06-11 12:08 shared-config
+drwxr-xr-x  3 tom  tom  4.0K 2010-10-19 18:42 .shutter/
+drwx------  2 tom  tom  4.0K 2011-05-13 18:34 .ssh/
+-rw-r--r--  1 tom  tom     0 2010-02-27 10:24 .sudo_as_admin_successful
+-rw-------  1 tom  tom   16K 2011-06-07 17:24 .swm
+-rw-------  1 tom  tom   12K 2011-05-22 14:39 .swn
+-rw-------  1 tom  tom   12K 2010-03-13 10:40 .swo
+-rw-------  1 tom  tom   12K 2010-03-12 06:59 .swp
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:45 terminal.rb
+-rw-r--r--  1 tom  tom   204 2011-06-10 15:16 test-example-for-tzim.rb
+drwxr-xr-x  3 tom  tom  4.0K 2010-02-28 16:31 .themes/
+drwxr-xr-x  5 tom  tom  4.0K 2010-02-28 16:12 .thumbnails/
+-rw-r--r--  1 tom  tom   417 2011-05-17 15:44 todos
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .txtmap -> /home/tom/Dropbox/.txtmap
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .txtrc -> /home/tom/Dropbox/.txtrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 10:23 .update-manager-core/
+drwx------  2 tom  tom  4.0K 2010-03-15 13:44 .update-notifier/
+-rw-------  1 root root 4.6K 2011-06-07 17:23 .viminfo
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .vimmap -> /home/tom/Dropbox/.vimmap
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .vimperatorrc -> /home/tom/Dropbox/.vimperatorrc
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .vimrc -> /home/tom/Dropbox/.vimrc
+lrwxrwxrwx  1 tom  tom    25 2011-04-19 13:26 writing -> /home/tom/Dropbox/writing/
+-rw-r--r--  1 tom  tom    77 2011-06-07 17:31 .xmodmap
+-rw-r--r--  1 tom  tom   448 2011-01-06 03:25 .xrced
+-rw-------  1 tom  tom     0 2011-01-03 15:39 .xsel.log
+-rw-------  1 tom  tom   11K 2011-06-11 11:50 .xsession-errors
+-rw-------  1 tom  tom  5.1K 2011-06-10 13:50 .xsession-errors.old
+reason:~$ vim blah 
+reason:~$ ln -i --symbolic ~/Dropbox/.inputrc ~/.inputrc
+ln: replace `/home/tom/.inputrc'? y
+reason:~$ ln -i --symbolic ~/Dropbox/.inputrc ~/.rvmrc
+ln: replace `/home/tom/.rvmrc'? yes
+reason:~$ la
+total 552K
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .adobe/
+drwxr-xr-x  5 tom  tom  4.0K 2011-01-31 13:25 .anki/
+drwx------  2 tom  tom  4.0K 2011-06-01 10:02 .aptitude/
+-rw-r--r--  1 tom  tom   165 2011-06-01 11:47 .autotest
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_aliases -> /home/tom/Dropbox/.bash_aliases
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_history -> /home/tom/Dropbox/.bash_history
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:09 .bash_logout -> /home/tom/Dropbox/.bash_logout
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_profile -> /home/tom/Dropbox/.bash_profile
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .bashrc -> /home/tom/Dropbox/.bashrc
+lrwxrwxrwx  1 tom  tom    29 2011-06-11 12:09 .blackboxrc -> /home/tom/Dropbox/.blackboxrc
+-rw-r--r--  1 tom  tom   163 2011-06-11 12:20 blah
+drwxr-xr-x  5 tom  tom  4.0K 2010-04-12 00:05 .blender/
+drwx------ 18 tom  tom  4.0K 2011-05-15 16:12 .cache/
+lrwxrwxrwx  1 tom  tom    13 2011-05-25 18:06 code -> writing/code//
+drwx------  3 tom  tom  4.0K 2010-05-19 18:27 .compiz/
+drwxr-xr-x 29 tom  tom  4.0K 2011-03-02 10:35 .config/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .dbus/
+drwxr-xr-x  2 tom  tom  4.0K 2011-02-04 15:53 .debtags/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 14:59 Desktop/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .dmrc -> /home/tom/Dropbox/.dmrc
+-rw-r--r--  1 tom  tom    58 2011-06-07 17:27 .dmrc.bak
+drwx------  4 tom  tom  4.0K 2011-06-09 11:53 Downloads/
+drwx------  3 tom  tom  4.0K 2011-06-11 12:24 .dropbox/
+drwx------ 18 tom  tom  4.0K 2011-06-11 12:10 Dropbox/
+drwxr-xr-x  5 tom  tom  4.0K 2011-05-25 14:29 .dropbox-dist/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 15:00 .dropbox-dist-new/
+drwx------  6 tom  tom  4.0K 2011-06-11 12:09 .e16/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-04 11:46 .Ephox/
+drwxr-xr-x  5 tom  tom  4.0K 2010-11-26 14:04 .eric4/
+-rw-------  1 tom  tom    16 2010-02-27 02:22 .esd_auth
+drwxr-xr-x  8 tom  tom  4.0K 2010-02-27 14:07 .evolution/
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 exo -> /home/tom/Dropbox/exo/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .exrc -> /home/tom/Dropbox/.exrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-03-01 16:27 .FBReader/
+drwxr-xr-x  2 tom  tom  4.0K 2010-04-17 14:39 .flux/
+drwxr-xr-x  5 tom  tom  4.0K 2011-04-12 15:46 .fluxbox/
+-rw-r--r--  1 tom  tom   116 2011-05-18 11:50 .fold
+drwxr-xr-x  2 tom  tom  4.0K 2011-04-28 00:58 .fontconfig/
+drwx------  5 tom  tom  4.0K 2011-06-10 14:48 .gconf/
+drwx------  2 tom  tom  4.0K 2011-06-11 12:24 .gconfd/
+drwx------  4 tom  tom  4.0K 2010-08-03 12:19 .gegl-0.0/
+drwxr-xr-x  4 tom  tom  4.0K 2011-05-13 13:40 .gem/
+drwxr-xr-x 22 tom  tom  4.0K 2011-04-19 12:33 .gimp-2.6/
+drwxr-xr-x  8 tom  tom  4.0K 2011-05-19 09:43 .git/
+lrwxrwxrwx  1 tom  tom    28 2011-06-11 12:09 .gitconfig -> /home/tom/Dropbox/.gitconfig
+-rw-r--r--  1 tom  tom   843 2010-12-18 20:03 .gitk
+-rw-r-----  1 tom  tom     0 2011-05-30 15:05 .gksu.lock
+drwxr--r--  3 tom  tom  4.0K 2010-12-15 02:38 .glipper/
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:44 gnome
+drwx------ 15 tom  tom  4.0K 2011-06-11 11:54 .gnome2/
+drwx------  2 tom  tom  4.0K 2010-02-27 02:22 .gnome2_private/
+drwxr-xr-x  3 tom  tom  4.0K 2010-03-29 16:47 .gnote/
+drwx------  2 tom  tom  4.0K 2011-01-15 13:05 .gnupg/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-07 17:30 .gstreamer-0.10/
+-rw-r--r--  1 tom  tom   283 2011-05-30 15:05 .gtk-bookmarks
+dr-x------  2 tom  tom     0 2011-06-10 14:48 .gvfs/
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .gvimrc -> /home/tom/Dropbox/.gvimrc
+drwxr-----  2 tom  tom  4.0K 2010-12-13 23:23 .hplip/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-16 18:07 .i4j_jres/
+-rwxr-xr-x  1 tom  tom  1.1K 2010-08-28 14:43 .iat.vim*
+-rw-------  1 tom  tom   97K 2011-06-10 14:48 .ICEauthority
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-28 16:30 .icons/
+lrwxrwxrwx  1 tom  tom    26 2011-06-11 12:26 .inputrc -> /home/tom/Dropbox/.inputrc
+-rw-r--r--  1 tom  tom   294 2010-10-11 15:13 .install4j
+drwxr-sr-x  3 tom  tom  4.0K 2011-05-08 23:31 .ipython/
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:10 .irb-history -> /home/tom/Dropbox/.irb-history
+lrwxrwxrwx  1 tom  tom    33 2011-06-11 12:09 irbrc-dont-work -> /home/tom/Dropbox/irbrc-dont-work
+-rw-r--r--  1 tom  tom   694 2010-03-22 12:28 .isomaster
+drwxr-xr-x  4 tom  tom  4.0K 2010-07-02 14:26 .java/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-11 22:54 .kde/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:23 .kodos/
+-rw-------  1 tom  tom   750 2011-06-02 01:55 .lesshst
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 lf5 -> /home/tom/Dropbox/lf5/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .local/
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .macromedia/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-23 11:36 .matplotlib/
+drwx------  3 tom  tom  4.0K 2010-02-27 14:06 .mission-control/
+drwx------  4 tom  tom  4.0K 2010-02-27 12:54 .mozilla/
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 12:53 .nautilus/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-07 23:19 .openoffice.org/
+lrwxrwxrwx  1 tom  tom    32 2011-06-11 12:21 .PersonalBrain -> /home/tom/Dropbox/.PersonalBrain/
+drwxr-xr-x  2 tom  tom  4.0K 2010-08-14 13:49 .pip/
+drwx------  3 tom  tom  4.0K 2010-03-29 16:58 .pki/
+-rw-------  1 tom  tom   12K 2010-03-10 10:10 .polymaths.txt.swp
+-rw-r--r--  1 tom  tom    37 2010-06-10 13:45 .printer-groups.xml
+-rw-r--r--  1 tom  tom   715 2011-01-09 14:20 .profile
+-rw-r--r--  1 tom  tom   675 2011-01-02 12:46 .profile.bak
+lrwxrwxrwx  1 tom  tom    24 2011-04-19 13:25 Public -> /home/tom/Dropbox/Public/
+drwx------  2 tom  tom  4.0K 2011-06-10 14:48 .pulse/
+-rw-------  1 tom  tom   256 2010-02-27 02:22 .pulse-cookie
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:21 .qt/
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .rbmap -> /home/tom/Dropbox/.rbmap
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .rbrc -> /home/tom/Dropbox/.rbrc
+-rw-------  1 tom  tom  8.8K 2011-06-11 11:54 .recently-used.xbel
+drwxr-xr-x 24 tom  tom  4.0K 2011-06-01 10:05 .rvm/
+lrwxrwxrwx  1 tom  tom    26 2011-06-11 12:26 .rvmrc -> /home/tom/Dropbox/.inputrc
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-10 15:09 scripts-in-progress/
+drwxr-xr-x  3 tom  tom  4.0K 2011-06-01 09:59 share/
+-rw-r--r--  1 tom  tom   469 2011-06-11 12:08 shared-config
+drwxr-xr-x  3 tom  tom  4.0K 2010-10-19 18:42 .shutter/
+drwx------  2 tom  tom  4.0K 2011-05-13 18:34 .ssh/
+-rw-r--r--  1 tom  tom     0 2010-02-27 10:24 .sudo_as_admin_successful
+-rw-------  1 tom  tom   16K 2011-06-07 17:24 .swm
+-rw-------  1 tom  tom   12K 2011-05-22 14:39 .swn
+-rw-------  1 tom  tom   12K 2010-03-13 10:40 .swo
+-rw-------  1 tom  tom   12K 2010-03-12 06:59 .swp
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:45 terminal.rb
+-rw-r--r--  1 tom  tom   204 2011-06-10 15:16 test-example-for-tzim.rb
+drwxr-xr-x  3 tom  tom  4.0K 2010-02-28 16:31 .themes/
+drwxr-xr-x  5 tom  tom  4.0K 2010-02-28 16:12 .thumbnails/
+-rw-r--r--  1 tom  tom   417 2011-05-17 15:44 todos
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .txtmap -> /home/tom/Dropbox/.txtmap
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .txtrc -> /home/tom/Dropbox/.txtrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 10:23 .update-manager-core/
+drwx------  2 tom  tom  4.0K 2010-03-15 13:44 .update-notifier/
+lrwxrwxrwx  1 tom  tom    22 2011-06-11 12:25 .vim -> /home/tom/Dropbox/.vim/
+-rw-------  1 root root 4.6K 2011-06-07 17:23 .viminfo
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .vimmap -> /home/tom/Dropbox/.vimmap
+lrwxrwxrwx  1 tom  tom    29 2011-06-11 12:25 .vimperator -> /home/tom/Dropbox/.vimperator/
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .vimperatorrc -> /home/tom/Dropbox/.vimperatorrc
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .vimrc -> /home/tom/Dropbox/.vimrc
+lrwxrwxrwx  1 tom  tom    25 2011-04-19 13:26 writing -> /home/tom/Dropbox/writing/
+-rw-r--r--  1 tom  tom    77 2011-06-07 17:31 .xmodmap
+-rw-r--r--  1 tom  tom   448 2011-01-06 03:25 .xrced
+-rw-------  1 tom  tom     0 2011-01-03 15:39 .xsel.log
+-rw-------  1 tom  tom   11K 2011-06-11 12:24 .xsession-errors
+-rw-------  1 tom  tom  5.1K 2011-06-10 13:50 .xsession-errors.old
+reason:~$ cd Dropbox/
+
+  ===============================================================
+  = NOTICE:                                                     =
+  ===============================================================
+  = RVM has encountered a new or modified .rvmrc file in the    =
+  = current working directory. Resource files may execute       =
+  = arbitrary instructions, so RVM will not use an .rvmrc file  =
+  = that has not been explicitly marked as 'trusted.'           =
+  =                                                             =
+  = Examine the contents of this file carefully to be sure the  =
+  = contents are good before trusting it!                       =
+  =                                                             =
+  = You will now be given a chance to read the .rvmrc file      =
+  = before deciding whether or not its contents are safe. After =
+  = reading the file, you will be prompted 'yes or no' to set   =
+  = the trust level for this particular version of the file.    =
+  =                                                             =
+  = Note: You will be re-prompted each time the .rvmrc file     =
+  = changes, and may change the trust setting manually at any   =
+  = time.                                                       =
+  =                                                             =
+  = Press 'q' to exit the reader when finished reading the file =
+  ===============================================================
+
+  (press enter to review the .rvmrc file)
+
+  
+export rvm_path="/home/tom/.rvm"
+export rvm_pretty_print_flag=1
+
+
+  Examination of  /home/tom/Dropbox/.rvmrc is now complete.
+
+  ================================================================
+  = Trusting an .rvmrc file means that whenever you cd into this =
+  = directory, RVM will run this .rvmrc script in your shell.    =
+  =                                                              =
+  = If the contents of the file change, you will be re-prompted  =
+  = to review the file and adjust its trust settings. You may    =
+  = also change the trust settings manually at any time with     =
+  = the 'rvm rvmrc' command.                                     =
+  =                                                              =
+  = Now that you have examined the contents of the file, do you  =
+  = wish to trust this particular .rvmrc?                        =
+  ================================================================
+
+  (yes or no) > yes
+reason:~/Dropbox$ ls
+archive/  exo/       irbrc-dont-work  lf5/     pmsystem/  reason_package_list  social/
+data/     finances/  languages/       Photos/  Public/    Shared/              writing/
+reason:~/Dropbox$ la
+total 188K
+drwxr-xr-x 4 tom  tom  4.0K 2011-05-25 16:43 archive/
+-rw-r--r-- 1 tom  tom  1.3K 2011-06-09 09:31 .bash_aliases
+-rw------- 1 tom  tom   11K 2011-06-11 12:27 .bash_history
+-rw-r--r-- 1 tom  tom   220 2010-02-27 10:12 .bash_logout
+-rw-r--r-- 1 tom  tom   290 2011-06-01 09:59 .bash_profile
+-rw-r--r-- 1 tom  tom  1.3K 2011-06-07 17:26 .bashrc
+-rw-r--r-- 1 tom  tom    51 2011-02-22 08:16 .blackboxrc
+drwxr-xr-x 9 tom  tom  4.0K 2011-04-19 15:09 data/
+-rw-r--r-- 1 tom  tom    55 2011-06-10 14:48 .dmrc
+-rw-r--r-- 1 tom  tom    29 2011-06-10 14:49 .dropbox
+drwxr-xr-x 5 tom  tom  4.0K 2011-06-10 19:03 .dropbox.cache/
+drwxr-xr-x 6 tom  tom  4.0K 2011-06-11 11:38 exo/
+-rw-r--r-- 1 tom  tom   647 2011-05-26 23:17 .exrc
+drwxr-xr-x 5 tom  tom  4.0K 2011-05-26 09:32 finances/
+-rw-r--r-- 1 tom  tom   171 2011-06-01 11:02 .gitconfig
+-rw-r--r-- 1 tom  tom   403 2011-06-11 11:53 .gvimrc
+-rw-r--r-- 1 tom  tom    41 2010-04-04 13:08 .inputrc
+-rw-r--r-- 1 tom  tom   447 2011-06-11 11:32 .irb-history
+-rw-r--r-- 1 tom  tom   247 2011-06-10 16:06 irbrc-dont-work
+drwx------ 4 tom  tom  4.0K 2011-05-25 18:09 languages/
+drwxr-xr-x 7 tom  tom  4.0K 2011-06-01 14:20 lf5/
+drwxr-xr-x 4 tom  tom  4.0K 2011-06-11 11:46 .PersonalBrain/
+drwxr-xr-x 3 tom  tom  4.0K 2011-05-26 09:40 Photos/
+drwxr-xr-x 4 tom  tom  4.0K 2011-05-26 09:33 pmsystem/
+drwxr-xr-x 3 tom  tom  4.0K 2011-05-08 20:19 Public/
+-rw-r--r-- 1 tom  tom   291 2011-06-01 23:41 .rbmap
+-rw-r--r-- 1 tom  tom   882 2011-05-26 22:13 .rbrc
+-rw-r--r-- 1 root root  30K 2011-06-10 13:06 reason_package_list
+-rw-r--r-- 1 tom  tom    64 2011-06-01 10:00 .rvmrc
+drwxr-xr-x 2 tom  tom  4.0K 2011-01-25 13:36 Shared/
+drwxr-xr-x 6 tom  tom  4.0K 2011-05-25 18:06 social/
+-rw-r--r-- 1 tom  tom     0 2011-06-01 22:45 .txtmap
+-rw-r--r-- 1 tom  tom   588 2011-05-26 22:01 .txtrc
+drwxr-xr-x 5 tom  tom  4.0K 2011-06-10 14:49 .vim/
+-rw-r--r-- 1 tom  tom   459 2011-06-10 02:11 .vimmap
+drwx------ 3 tom  tom  4.0K 2010-07-02 15:16 .vimperator/
+-rw-r--r-- 1 tom  tom   158 2010-07-28 12:46 .vimperatorrc
+-rw-r--r-- 1 tom  tom  1.3K 2011-06-11 12:08 .vimrc
+drwxr-xr-x 7 tom  tom  4.0K 2011-05-25 16:44 writing/
+reason:~/Dropbox$ cd
+reason:~$ ls
+blah      Downloads/  gnome             Public@               shared-config             todos
+code@     Dropbox/    irbrc-dont-work@  scripts-in-progress/  terminal.rb               writing@
+Desktop/  exo@        lf5@              share/                test-example-for-tzim.rb
+reason:~$ mv scripts-in-progress/ /home/tom/Dropbox/scripts
+reason:~$ ln -i --symbolic Dropbox/scripts/ scripts
+reason:~$ ls
+blah      Downloads/  gnome             Public@   shared-config             todos
+code@     Dropbox/    irbrc-dont-work@  scripts@  terminal.rb               writing@
+Desktop/  exo@        lf5@              share/    test-example-for-tzim.rb
+reason:~$ rm shared-config blah 
+reason:~$ rm test-example-for-tzim.rb 
+reason:~$ mv terminal.rb scripts
+reason:~$ ls
+code@     Downloads/  exo@   irbrc-dont-work@  Public@   share/  writing@
+Desktop/  Dropbox/    gnome  lf5@              scripts@  todos
+reason:~$ cat gnome 
+def terminal( options )
+	%x{gnome-terminal} unless options
+	
+=begin
+gnome-terminal(1)                                            gnome-terminal(1) 
+
+NAME
+       gnome-terminal — is a terminal emulation application.
+
+SYNOPSIS
+       gnome-terminal  [-e,  --command=STRING]   [-x,  --execute ]  [--window-
+       with-profile=PROFILENAME]  [--tab-with-profile=PROFILENAME]  [--window-
+       with-profile-internal-id=PROFILEID]       [--tab-with-profile-internal-
+       id=PROFILEID]    [--role=ROLE]    [--show-menubar]     [--hide-menubar]
+       [--geometry=GEOMETRY]     [--disable-factory]     [-t,   --title=TITLE]
+       [--working-directory=DIRNAME]  [--usage]  [-?, --help]
+
+DESCRIPTION
+       GNOME Terminal is a terminal emulation application that you can use  to
+       perform the following actions:
+
+       Access a UNIX shell in the GNOME environment.
+
+       A shell is a program that interprets and executes the commands that you
+       type at a command line prompt.  When  you  start  GNOME  Terminal,  the
+       application  starts  the default shell that is specified in your system
+       account. You can switch to a different shell at any time.
+
+       Run any application that is designed to run on VT102, VT220, and  xterm
+       terminals.
+
+       GNOME  Terminal  emulates  the xterm program developed by the X Consor‐
+       tium. In turn, the xterm program emulates the DEC  VT102  terminal  and
+       also  supports  the DEC VT220 escape sequences. An escape sequence is a
+       series of characters that starts with the Esc character.
+
+       GNOME Terminal accepts all of the escape sequences that the  VT102  and
+       VT220  terminals  use  for functions such as positioning the cursor and
+       clearing the screen.
+
+OPTIONS
+       -e, --command=STRING
+                 Execute the argument to this option inside the terminal.
+
+       -x, --execute
+                 Execute the remainder of the command line inside  the  termi‐
+                 nal.
+
+       --window-with-profile=PROFILENAME
+                 Open  a  new  window containing a tab with the given profile.
+                 More than one of these options can be provided.
+
+       --tab-with-profile=PROFILENAME
+                 Open a tab in the window with the given  profile.  More  than
+                 one of these options can be provided, to open several tabs .
+
+       --window-with-profile-internal-id=PROFILEID
+                 Open a new window containing a tab with the given profile ID.
+                 Used internally to save sessions.
+
+       --tab-with-profile-internal-id=PROFILEID
+                 Open a tab in the window with the  given  profile  ID.   Used
+                 internally to save sessions.
+
+       --role=ROLE
+                 Set  the  role for the last-specified window; applies to only
+                 one window; can be specified once for each window you  create
+                 from the command line.
+
+       --show-menubar
+                 Turn  on  the menu bar for the last-specified window; applies
+                 to only one window; can be specified once for each window you
+                 create from the command line.
+
+       --hide-menubar
+                 Turn  off the menu bar for the last-specified window; applies
+                 to only one window; can be specified once for each window you
+                 create from the command line.
+
+       --geometry=GEOMETRY
+                 X geometry specification (see "X" man page), can be specified
+                 once per window to be opened.
+
+       --disable-factory
+                 Do not register with the activation name server, do  not  re-
+                 use an active terminal.
+
+       -t, --title=TITLE
+                 Set the terminal's title to TITLE.
+
+       --working-directory=DIRNAME
+                 Set the terminal's working directory to DIRNAME.
+
+       --usage   Display brief usage message.
+
+       -?, --help
+                 Show help message.
+
+AUTHOR
+       This  manual page was written by Christian Marillat marillat@debian.org
+       for the Debian GNU/Linux system (but may be used by others).
+
+
+
+                                                             gnome-terminal(1)
+=end
+reason:~$ rm gnome 
+reason:~$ ls
+code@     Downloads/  exo@              lf5@     scripts@  todos
+Desktop/  Dropbox/    irbrc-dont-work@  Public@  share/    writing@
+reason:~$ ls share/
+man/
+reason:~$ ls share/man/
+man1/
+reason:~$ ls share/man/man1/
+rvm.1  rvm.1.gz
+reason:~$ vim share/README
+reason:~$ vim
+reason:~$ tail .exrc
+" user-defined commands:
+" g K q V v 
+" ^A ^K ^O ^W ^X 
+" _ * \ =
+"
+" Keys that just kind of blow
+" ^J
+"
+" Debugging Map
+map F iDebugging Map: "I was defined in ~/.exrc"
+reason:~$ vim
+
+[No write since last change]
+
+Press ENTER or type command to continue
+reason:~$ ls
+code@     Downloads/  exo@              lf5@    Public@   share/  writing@
+Desktop/  Dropbox/    irbrc-dont-work@  output  scripts@  todos
+reason:~$ rm output 
+reason:~$ pmo
+reason:~/code/pmarg/pmonline$ autotest
+loading autotest/rspec2
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/pages_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/sessions_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/models/user_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/requests/layout_links_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/requests/users_spec.rb'
+.........................................................
+
+Finished in 6.95 seconds
+57 examples, 0 failures
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.91 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.8 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88738060__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88738060__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88738060__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 3.09 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+.......FFF....FFF
+
+Failures:
+
+  1) UsersController POST 'create' failure should not create a user
+     Failure/Error: post :create, :user => @attr
+     ActionView::Template::Error:
+       undefined local variable or method `object' for #<#<Class:0xa915b90>:0xa092090>
+     # ./app/views/shared/_error_messages.html.erb:7:in `_app_views_shared__error_messages_html_erb___788057335_88484080__431412440'
+     # ./app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/controllers/users_controller.rb:20:in `create'
+     # ./spec/controllers/users_controller_spec.rb:49:in `block (5 levels) in <top (required)>'
+     # ./spec/controllers/users_controller_spec.rb:48:in `block (4 levels) in <top (required)>'
+
+  2) UsersController POST 'create' failure should have the right title
+     Failure/Error: post :create, :user => @attr
+     ActionView::Template::Error:
+       undefined local variable or method `object' for #<#<Class:0xa915b90>:0x998e794>
+     # ./app/views/shared/_error_messages.html.erb:7:in `_app_views_shared__error_messages_html_erb___788057335_88484080__431412440'
+     # ./app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/controllers/users_controller.rb:20:in `create'
+     # ./spec/controllers/users_controller_spec.rb:53:in `block (4 levels) in <top (required)>'
+
+  3) UsersController POST 'create' failure should render the 'new' page
+     Failure/Error: post :create, :user => @attr
+     ActionView::Template::Error:
+       undefined local variable or method `object' for #<#<Class:0xa915b90>:0xaf60a40>
+     # ./app/views/shared/_error_messages.html.erb:7:in `_app_views_shared__error_messages_html_erb___788057335_88484080__431412440'
+     # ./app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/controllers/users_controller.rb:20:in `create'
+     # ./spec/controllers/users_controller_spec.rb:57:in `block (4 levels) in <top (required)>'
+
+  4) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88964900__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  5) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88964900__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  6) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88964900__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 3 seconds
+17 examples, 6 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:47 # UsersController POST 'create' failure should not create a user
+rspec ./spec/controllers/users_controller_spec.rb:52 # UsersController POST 'create' failure should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:56 # UsersController POST 'create' failure should render the 'new' page
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88753440__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88753440__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88753440__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.99 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88735660__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88735660__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88735660__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.99 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88733320__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88733320__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88733320__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.95 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88715540__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88715540__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88715540__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.99 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFFFFFFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88796180__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88796180__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88796180__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+  4) UsersController PUT 'update' failure should render the 'edit' page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:116:in `block (4 levels) in <top (required)>'
+
+  5) UsersController PUT 'update' failure should have the right title
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:120:in `block (4 levels) in <top (required)>'
+
+  6) UsersController PUT 'update' success should change the user's attributes
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:132:in `block (4 levels) in <top (required)>'
+
+  7) UsersController PUT 'update' success should redirect to the user show page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:139:in `block (4 levels) in <top (required)>'
+
+  8) UsersController PUT 'update' success should have a flash message
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:144:in `block (4 levels) in <top (required)>'
+
+Finished in 3.26 seconds
+22 examples, 8 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+rspec ./spec/controllers/users_controller_spec.rb:115 # UsersController PUT 'update' failure should render the 'edit' page
+rspec ./spec/controllers/users_controller_spec.rb:119 # UsersController PUT 'update' failure should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:131 # UsersController PUT 'update' success should change the user's attributes
+rspec ./spec/controllers/users_controller_spec.rb:138 # UsersController PUT 'update' success should redirect to the user show page
+rspec ./spec/controllers/users_controller_spec.rb:143 # UsersController PUT 'update' success should have a flash message
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFFFFFFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88776110__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88776110__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88776110__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+  4) UsersController PUT 'update' failure should render the 'edit' page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:116:in `block (4 levels) in <top (required)>'
+
+  5) UsersController PUT 'update' failure should have the right title
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:120:in `block (4 levels) in <top (required)>'
+
+  6) UsersController PUT 'update' success should change the user's attributes
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:132:in `block (4 levels) in <top (required)>'
+
+  7) UsersController PUT 'update' success should redirect to the user show page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:139:in `block (4 levels) in <top (required)>'
+
+  8) UsersController PUT 'update' success should have a flash message
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:144:in `block (4 levels) in <top (required)>'
+
+Finished in 3.23 seconds
+22 examples, 8 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+rspec ./spec/controllers/users_controller_spec.rb:115 # UsersController PUT 'update' failure should render the 'edit' page
+rspec ./spec/controllers/users_controller_spec.rb:119 # UsersController PUT 'update' failure should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:131 # UsersController PUT 'update' success should change the user's attributes
+rspec ./spec/controllers/users_controller_spec.rb:138 # UsersController PUT 'update' success should redirect to the user show page
+rspec ./spec/controllers/users_controller_spec.rb:143 # UsersController PUT 'update' success should have a flash message
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFFFFFFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88772620__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88772620__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88772620__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+  4) UsersController PUT 'update' failure should render the 'edit' page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:116:in `block (4 levels) in <top (required)>'
+
+  5) UsersController PUT 'update' failure should have the right title
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:120:in `block (4 levels) in <top (required)>'
+
+  6) UsersController PUT 'update' success should change the user's attributes
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:132:in `block (4 levels) in <top (required)>'
+
+  7) UsersController PUT 'update' success should redirect to the user show page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:139:in `block (4 levels) in <top (required)>'
+
+  8) UsersController PUT 'update' success should have a flash message
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:144:in `block (4 levels) in <top (required)>'
+
+Finished in 3.31 seconds
+22 examples, 8 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+rspec ./spec/controllers/users_controller_spec.rb:115 # UsersController PUT 'update' failure should render the 'edit' page
+rspec ./spec/controllers/users_controller_spec.rb:119 # UsersController PUT 'update' failure should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:131 # UsersController PUT 'update' success should change the user's attributes
+rspec ./spec/controllers/users_controller_spec.rb:138 # UsersController PUT 'update' success should redirect to the user show page
+rspec ./spec/controllers/users_controller_spec.rb:143 # UsersController PUT 'update' success should have a flash message
+================================================================================
+
+^CInterrupt a second time to quit
+^Creason:~/code/pmarg/pmonline$ autotest
+loading autotest/rspec2
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/pages_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/sessions_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/models/user_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/requests/layout_links_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/requests/users_spec.rb'
+.................................FFF.............................
+
+Failures:
+
+  1) UsersController PUT 'update' success should change the user's attributes
+     Failure/Error: @user.name.should == @attr[:name]
+       expected: "user@example.org"
+            got: "Tom Henderson" (using ==)
+     # ./spec/controllers/users_controller_spec.rb:134:in `block (4 levels) in <top (required)>'
+
+  2) UsersController PUT 'update' success should redirect to the user show page
+     Failure/Error: response.should redirect_to( user_path( @user ))
+       Expected block to return true value.
+     # ./spec/controllers/users_controller_spec.rb:140:in `block (4 levels) in <top (required)>'
+
+  3) UsersController PUT 'update' success should have a flash message
+     Failure/Error: flash[:success].should =~ /updated/
+       expected: /updated/
+            got: nil (using =~)
+     # ./spec/controllers/users_controller_spec.rb:145:in `block (4 levels) in <top (required)>'
+
+Finished in 7.17 seconds
+65 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:131 # UsersController PUT 'update' success should change the user's attributes
+rspec ./spec/controllers/users_controller_spec.rb:138 # UsersController PUT 'update' success should redirect to the user show page
+rspec ./spec/controllers/users_controller_spec.rb:143 # UsersController PUT 'update' success should have a flash message
+================================================================================
+
+
+reason:/$ cd
+reason:~$ man googlecl
+No manual entry for googlecl
+reason:~$ googlecl
+googlecl: command not found
+reason:~$ man google
+No manual entry for google
+See 'man 7 undocumented' for help when manual pages are not available.
+reason:~$ in
+reason:~$ ls .exrc_files/
+rubyrc  txtrc
+reason:~$ la *rc
+ls: cannot access *rc: No such file or directory
+reason:~$ la ./*rc
+ls: cannot access ./*rc: No such file or directory
+reason:~$ la |grep rc$
+-rw-r--r--  1 tom  tom  1.3K 2011-06-07 17:26 .bashrc
+-rw-r--r--  1 tom  tom    51 2011-02-22 08:16 .blackboxrc
+-rw-r--r--  1 tom  tom    55 2011-06-10 14:48 .dmrc
+-rw-r--r--  1 tom  tom   647 2011-05-26 23:17 .exrc
+-rw-r--r--  1 tom  tom   380 2011-06-02 11:34 .gvimrc
+-rw-r--r--  1 tom  tom    41 2010-04-04 13:08 .inputrc
+-rw-r--r--  1 tom  tom    64 2011-06-01 10:00 .rvmrc
+-rw-r--r--  1 tom  tom   158 2010-07-28 12:46 .vimperatorrc
+-rw-r--r--  1 tom  tom  1.2K 2011-06-10 02:11 .vimrc
+reason:~$ mv .exrc_files/* .
+reason:~$ la |grep rc$
+-rw-r--r--  1 tom  tom  1.3K 2011-06-07 17:26 .bashrc
+-rw-r--r--  1 tom  tom    51 2011-02-22 08:16 .blackboxrc
+-rw-r--r--  1 tom  tom    55 2011-06-10 14:48 .dmrc
+-rw-r--r--  1 tom  tom   647 2011-05-26 23:17 .exrc
+-rw-r--r--  1 tom  tom   380 2011-06-02 11:34 .gvimrc
+-rw-r--r--  1 tom  tom    41 2010-04-04 13:08 .inputrc
+-rw-r--r--  1 tom  tom   882 2011-05-26 22:13 rubyrc
+-rw-r--r--  1 tom  tom    64 2011-06-01 10:00 .rvmrc
+-rw-r--r--  1 tom  tom   588 2011-05-26 22:01 txtrc
+-rw-r--r--  1 tom  tom   158 2010-07-28 12:46 .vimperatorrc
+-rw-r--r--  1 tom  tom  1.2K 2011-06-10 02:11 .vimrc
+reason:~$ mv rubyrc .rbrc
+reason:~$ mv txtrc .txtrc
+reason:~$ rmdir .exrc
+rmdir: failed to remove `.exrc': Not a directory
+reason:~$ rmdir .exrc_files/
+reason:~$ vim
+reason:~$ vim
+reason:~$ la|grep map
+-rw-r--r--  1 tom  tom   459 2011-06-10 02:11 .map
+-rw-r--r--  1 tom  tom   291 2011-06-01 23:41 .rbmap
+-rw-r--r--  1 tom  tom     0 2011-06-01 22:45 .txtmap
+-rw-r--r--  1 tom  tom    77 2011-06-07 17:31 .xmodmap
+reason:~$ la|grep map>shared-config
+reason:~$ la|grep rc$>>shared-config
+reason:~$ echo .PersonalBrain/ >> shared-config 
+reason:~$ echo .PersonalBrain/ >> shared-config 
+lecho .PersonalBrain/ >> shared-config 
+reason:~$ 
+im
+reason:~$ vim shared-config 
+reason:~$ vim .gvimrc
+reason:~$ grep ~/.vimrc cmd
+grep: cmd: No such file or directory
+reason:~$ grep ~/.vimrc cmd
+lgrep cmd ~/.vimrc 
+set shellcmdflag=-ic
+autocmd CursorMovedI * call CheckFileType()
+	"stop the autocmd if detected, or above count threshold
+		autocmd! newFileDetection
+reason:~$ vim shared-config 
+
+[No write since last change]
+mareason:~$ man ln
+reason:~$ exit
+reason:~$ cd
+reason:~$ ls .map
+.map
+reason:~$ mv .map .vimmap
+reason:~$ vim .vimrc 
+Error detected while processing /home/tom/.vimrc:
+line   33:
+E484: Can't open file /home/tom/.map
+Press ENTER or type command to continue
+reason:~$ vim
+reason:~$ ruby shared-config 
+ln: target `.PersonalBrain/' is not a directory: No such file or directory
+ln: target `.vim/' is not a directory: No such file or directory
+ln: target `.vimperator/' is not a directory: No such file or directory
+mv: `.inputrc' and `/home/tom/Dropbox/.inputrc' are the same file
+ln: replace `.inputrc'? mv: `.rvmrc' and `/home/tom/Dropbox/.rvmrc' are the same file
+ln: replace `.rvmrc'? n
+reason:~$ ls
+code@       Dropbox/  irbrc-dont-work@  scripts-in-progress/  terminal.rb               writing@
+Desktop/    exo@      lf5@              share/                test-example-for-tzim.rb
+Downloads/  gnome     Public@           shared-config         todos
+reason:~$ la
+total 548K
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .adobe/
+drwxr-xr-x  5 tom  tom  4.0K 2011-01-31 13:25 .anki/
+drwx------  2 tom  tom  4.0K 2011-06-01 10:02 .aptitude/
+-rw-r--r--  1 tom  tom   165 2011-06-01 11:47 .autotest
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_aliases -> /home/tom/Dropbox/.bash_aliases
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_history -> /home/tom/Dropbox/.bash_history
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:09 .bash_logout -> /home/tom/Dropbox/.bash_logout
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_profile -> /home/tom/Dropbox/.bash_profile
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .bashrc -> /home/tom/Dropbox/.bashrc
+lrwxrwxrwx  1 tom  tom    29 2011-06-11 12:09 .blackboxrc -> /home/tom/Dropbox/.blackboxrc
+drwxr-xr-x  5 tom  tom  4.0K 2010-04-12 00:05 .blender/
+drwx------ 18 tom  tom  4.0K 2011-05-15 16:12 .cache/
+lrwxrwxrwx  1 tom  tom    13 2011-05-25 18:06 code -> writing/code//
+drwx------  3 tom  tom  4.0K 2010-05-19 18:27 .compiz/
+drwxr-xr-x 29 tom  tom  4.0K 2011-03-02 10:35 .config/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .dbus/
+drwxr-xr-x  2 tom  tom  4.0K 2011-02-04 15:53 .debtags/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 14:59 Desktop/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .dmrc -> /home/tom/Dropbox/.dmrc
+-rw-r--r--  1 tom  tom    58 2011-06-07 17:27 .dmrc.bak
+drwx------  4 tom  tom  4.0K 2011-06-09 11:53 Downloads/
+drwx------  3 tom  tom  4.0K 2011-06-11 12:09 .dropbox/
+drwx------ 18 tom  tom  4.0K 2011-06-11 12:10 Dropbox/
+drwxr-xr-x  5 tom  tom  4.0K 2011-05-25 14:29 .dropbox-dist/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 15:00 .dropbox-dist-new/
+drwx------  6 tom  tom  4.0K 2011-06-11 12:09 .e16/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-04 11:46 .Ephox/
+drwxr-xr-x  5 tom  tom  4.0K 2010-11-26 14:04 .eric4/
+-rw-------  1 tom  tom    16 2010-02-27 02:22 .esd_auth
+drwxr-xr-x  8 tom  tom  4.0K 2010-02-27 14:07 .evolution/
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 exo -> /home/tom/Dropbox/exo/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .exrc -> /home/tom/Dropbox/.exrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-03-01 16:27 .FBReader/
+drwxr-xr-x  2 tom  tom  4.0K 2010-04-17 14:39 .flux/
+drwxr-xr-x  5 tom  tom  4.0K 2011-04-12 15:46 .fluxbox/
+-rw-r--r--  1 tom  tom   116 2011-05-18 11:50 .fold
+drwxr-xr-x  2 tom  tom  4.0K 2011-04-28 00:58 .fontconfig/
+drwx------  5 tom  tom  4.0K 2011-06-10 14:48 .gconf/
+drwx------  2 tom  tom  4.0K 2011-06-11 11:54 .gconfd/
+drwx------  4 tom  tom  4.0K 2010-08-03 12:19 .gegl-0.0/
+drwxr-xr-x  4 tom  tom  4.0K 2011-05-13 13:40 .gem/
+drwxr-xr-x 22 tom  tom  4.0K 2011-04-19 12:33 .gimp-2.6/
+drwxr-xr-x  8 tom  tom  4.0K 2011-05-19 09:43 .git/
+lrwxrwxrwx  1 tom  tom    28 2011-06-11 12:09 .gitconfig -> /home/tom/Dropbox/.gitconfig
+-rw-r--r--  1 tom  tom   843 2010-12-18 20:03 .gitk
+-rw-r-----  1 tom  tom     0 2011-05-30 15:05 .gksu.lock
+drwxr--r--  3 tom  tom  4.0K 2010-12-15 02:38 .glipper/
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:44 gnome
+drwx------ 15 tom  tom  4.0K 2011-06-11 11:54 .gnome2/
+drwx------  2 tom  tom  4.0K 2010-02-27 02:22 .gnome2_private/
+drwxr-xr-x  3 tom  tom  4.0K 2010-03-29 16:47 .gnote/
+drwx------  2 tom  tom  4.0K 2011-01-15 13:05 .gnupg/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-07 17:30 .gstreamer-0.10/
+-rw-r--r--  1 tom  tom   283 2011-05-30 15:05 .gtk-bookmarks
+dr-x------  2 tom  tom     0 2011-06-10 14:48 .gvfs/
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .gvimrc -> /home/tom/Dropbox/.gvimrc
+drwxr-----  2 tom  tom  4.0K 2010-12-13 23:23 .hplip/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-16 18:07 .i4j_jres/
+-rwxr-xr-x  1 tom  tom  1.1K 2010-08-28 14:43 .iat.vim*
+-rw-------  1 tom  tom   97K 2011-06-10 14:48 .ICEauthority
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-28 16:30 .icons/
+lrwxrwxrwx  1 tom  tom    26 2011-06-11 12:09 .inputrc -> /home/tom/Dropbox/.inputrc
+-rw-r--r--  1 tom  tom   294 2010-10-11 15:13 .install4j
+drwxr-sr-x  3 tom  tom  4.0K 2011-05-08 23:31 .ipython/
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:10 .irb-history -> /home/tom/Dropbox/.irb-history
+lrwxrwxrwx  1 tom  tom    33 2011-06-11 12:09 irbrc-dont-work -> /home/tom/Dropbox/irbrc-dont-work
+-rw-r--r--  1 tom  tom   694 2010-03-22 12:28 .isomaster
+drwxr-xr-x  4 tom  tom  4.0K 2010-07-02 14:26 .java/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-11 22:54 .kde/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:23 .kodos/
+-rw-------  1 tom  tom   750 2011-06-02 01:55 .lesshst
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 lf5 -> /home/tom/Dropbox/lf5/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .local/
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .macromedia/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-23 11:36 .matplotlib/
+drwx------  3 tom  tom  4.0K 2010-02-27 14:06 .mission-control/
+drwx------  4 tom  tom  4.0K 2010-02-27 12:54 .mozilla/
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 12:53 .nautilus/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-07 23:19 .openoffice.org/
+drwxr-xr-x  2 tom  tom  4.0K 2010-08-14 13:49 .pip/
+drwx------  3 tom  tom  4.0K 2010-03-29 16:58 .pki/
+-rw-------  1 tom  tom   12K 2010-03-10 10:10 .polymaths.txt.swp
+-rw-r--r--  1 tom  tom    37 2010-06-10 13:45 .printer-groups.xml
+-rw-r--r--  1 tom  tom   715 2011-01-09 14:20 .profile
+-rw-r--r--  1 tom  tom   675 2011-01-02 12:46 .profile.bak
+lrwxrwxrwx  1 tom  tom    24 2011-04-19 13:25 Public -> /home/tom/Dropbox/Public/
+drwx------  2 tom  tom  4.0K 2011-06-10 14:48 .pulse/
+-rw-------  1 tom  tom   256 2010-02-27 02:22 .pulse-cookie
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:21 .qt/
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .rbmap -> /home/tom/Dropbox/.rbmap
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .rbrc -> /home/tom/Dropbox/.rbrc
+-rw-------  1 tom  tom  8.8K 2011-06-11 11:54 .recently-used.xbel
+drwxr-xr-x 24 tom  tom  4.0K 2011-06-01 10:05 .rvm/
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .rvmrc -> /home/tom/Dropbox/.rvmrc
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-10 15:09 scripts-in-progress/
+drwxr-xr-x  3 tom  tom  4.0K 2011-06-01 09:59 share/
+-rw-r--r--  1 tom  tom   469 2011-06-11 12:08 shared-config
+drwxr-xr-x  3 tom  tom  4.0K 2010-10-19 18:42 .shutter/
+drwx------  2 tom  tom  4.0K 2011-05-13 18:34 .ssh/
+-rw-r--r--  1 tom  tom     0 2010-02-27 10:24 .sudo_as_admin_successful
+-rw-------  1 tom  tom   16K 2011-06-07 17:24 .swm
+-rw-------  1 tom  tom   12K 2011-05-22 14:39 .swn
+-rw-------  1 tom  tom   12K 2010-03-13 10:40 .swo
+-rw-------  1 tom  tom   12K 2010-03-12 06:59 .swp
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:45 terminal.rb
+-rw-r--r--  1 tom  tom   204 2011-06-10 15:16 test-example-for-tzim.rb
+drwxr-xr-x  3 tom  tom  4.0K 2010-02-28 16:31 .themes/
+drwxr-xr-x  5 tom  tom  4.0K 2010-02-28 16:12 .thumbnails/
+-rw-r--r--  1 tom  tom   417 2011-05-17 15:44 todos
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .txtmap -> /home/tom/Dropbox/.txtmap
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .txtrc -> /home/tom/Dropbox/.txtrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 10:23 .update-manager-core/
+drwx------  2 tom  tom  4.0K 2010-03-15 13:44 .update-notifier/
+-rw-------  1 root root 4.6K 2011-06-07 17:23 .viminfo
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .vimmap -> /home/tom/Dropbox/.vimmap
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .vimperatorrc -> /home/tom/Dropbox/.vimperatorrc
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .vimrc -> /home/tom/Dropbox/.vimrc
+lrwxrwxrwx  1 tom  tom    25 2011-04-19 13:26 writing -> /home/tom/Dropbox/writing/
+-rw-r--r--  1 tom  tom    77 2011-06-07 17:31 .xmodmap
+-rw-r--r--  1 tom  tom   448 2011-01-06 03:25 .xrced
+-rw-------  1 tom  tom     0 2011-01-03 15:39 .xsel.log
+-rw-------  1 tom  tom   11K 2011-06-11 11:50 .xsession-errors
+-rw-------  1 tom  tom  5.1K 2011-06-10 13:50 .xsession-errors.old
+reason:~$ vim .txt
+reason:~$ vim .txtmap 
+reason:~$ vim .txtrc 
+reason:~$ vim .vimmap 
+reason:~$ vim
+reason:~$ ls .PersonalBrain
+ls: cannot access .PersonalBrain: No such file or directory
+reason:~$ ls /home/tom/Dropbox/.PersonalBrain/
+accelerators.csv  info6.bin                 TheBrain5Preferences.xml  themes/
+brains.guidmap    templates/                TheBrain6Preferences.bak
+info5.bin         TheBrain5Preferences.bak  TheBrain6Preferences.xml
+reason:~$ ln -i --symbolic /home/tom/Dropbox/.PersonalBrain/ .PersonalBrain/
+ln: target `.PersonalBrain/' is not a directory: No such file or directory
+reason:~$ ln -i --symbolic /home/tom/Dropbox/.PersonalBrain .PersonalBrain
+reason:~$ la
+total 552K
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .adobe/
+drwxr-xr-x  5 tom  tom  4.0K 2011-01-31 13:25 .anki/
+drwx------  2 tom  tom  4.0K 2011-06-01 10:02 .aptitude/
+-rw-r--r--  1 tom  tom   165 2011-06-01 11:47 .autotest
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_aliases -> /home/tom/Dropbox/.bash_aliases
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_history -> /home/tom/Dropbox/.bash_history
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:09 .bash_logout -> /home/tom/Dropbox/.bash_logout
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_profile -> /home/tom/Dropbox/.bash_profile
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .bashrc -> /home/tom/Dropbox/.bashrc
+lrwxrwxrwx  1 tom  tom    29 2011-06-11 12:09 .blackboxrc -> /home/tom/Dropbox/.blackboxrc
+-rw-r--r--  1 tom  tom   163 2011-06-11 12:20 blah
+drwxr-xr-x  5 tom  tom  4.0K 2010-04-12 00:05 .blender/
+drwx------ 18 tom  tom  4.0K 2011-05-15 16:12 .cache/
+lrwxrwxrwx  1 tom  tom    13 2011-05-25 18:06 code -> writing/code//
+drwx------  3 tom  tom  4.0K 2010-05-19 18:27 .compiz/
+drwxr-xr-x 29 tom  tom  4.0K 2011-03-02 10:35 .config/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .dbus/
+drwxr-xr-x  2 tom  tom  4.0K 2011-02-04 15:53 .debtags/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 14:59 Desktop/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .dmrc -> /home/tom/Dropbox/.dmrc
+-rw-r--r--  1 tom  tom    58 2011-06-07 17:27 .dmrc.bak
+drwx------  4 tom  tom  4.0K 2011-06-09 11:53 Downloads/
+drwx------  3 tom  tom  4.0K 2011-06-11 12:21 .dropbox/
+drwx------ 18 tom  tom  4.0K 2011-06-11 12:10 Dropbox/
+drwxr-xr-x  5 tom  tom  4.0K 2011-05-25 14:29 .dropbox-dist/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 15:00 .dropbox-dist-new/
+drwx------  6 tom  tom  4.0K 2011-06-11 12:09 .e16/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-04 11:46 .Ephox/
+drwxr-xr-x  5 tom  tom  4.0K 2010-11-26 14:04 .eric4/
+-rw-------  1 tom  tom    16 2010-02-27 02:22 .esd_auth
+drwxr-xr-x  8 tom  tom  4.0K 2010-02-27 14:07 .evolution/
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 exo -> /home/tom/Dropbox/exo/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .exrc -> /home/tom/Dropbox/.exrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-03-01 16:27 .FBReader/
+drwxr-xr-x  2 tom  tom  4.0K 2010-04-17 14:39 .flux/
+drwxr-xr-x  5 tom  tom  4.0K 2011-04-12 15:46 .fluxbox/
+-rw-r--r--  1 tom  tom   116 2011-05-18 11:50 .fold
+drwxr-xr-x  2 tom  tom  4.0K 2011-04-28 00:58 .fontconfig/
+drwx------  5 tom  tom  4.0K 2011-06-10 14:48 .gconf/
+drwx------  2 tom  tom  4.0K 2011-06-11 11:54 .gconfd/
+drwx------  4 tom  tom  4.0K 2010-08-03 12:19 .gegl-0.0/
+drwxr-xr-x  4 tom  tom  4.0K 2011-05-13 13:40 .gem/
+drwxr-xr-x 22 tom  tom  4.0K 2011-04-19 12:33 .gimp-2.6/
+drwxr-xr-x  8 tom  tom  4.0K 2011-05-19 09:43 .git/
+lrwxrwxrwx  1 tom  tom    28 2011-06-11 12:09 .gitconfig -> /home/tom/Dropbox/.gitconfig
+-rw-r--r--  1 tom  tom   843 2010-12-18 20:03 .gitk
+-rw-r-----  1 tom  tom     0 2011-05-30 15:05 .gksu.lock
+drwxr--r--  3 tom  tom  4.0K 2010-12-15 02:38 .glipper/
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:44 gnome
+drwx------ 15 tom  tom  4.0K 2011-06-11 11:54 .gnome2/
+drwx------  2 tom  tom  4.0K 2010-02-27 02:22 .gnome2_private/
+drwxr-xr-x  3 tom  tom  4.0K 2010-03-29 16:47 .gnote/
+drwx------  2 tom  tom  4.0K 2011-01-15 13:05 .gnupg/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-07 17:30 .gstreamer-0.10/
+-rw-r--r--  1 tom  tom   283 2011-05-30 15:05 .gtk-bookmarks
+dr-x------  2 tom  tom     0 2011-06-10 14:48 .gvfs/
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .gvimrc -> /home/tom/Dropbox/.gvimrc
+drwxr-----  2 tom  tom  4.0K 2010-12-13 23:23 .hplip/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-16 18:07 .i4j_jres/
+-rwxr-xr-x  1 tom  tom  1.1K 2010-08-28 14:43 .iat.vim*
+-rw-------  1 tom  tom   97K 2011-06-10 14:48 .ICEauthority
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-28 16:30 .icons/
+lrwxrwxrwx  1 tom  tom    26 2011-06-11 12:09 .inputrc -> /home/tom/Dropbox/.inputrc
+-rw-r--r--  1 tom  tom   294 2010-10-11 15:13 .install4j
+drwxr-sr-x  3 tom  tom  4.0K 2011-05-08 23:31 .ipython/
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:10 .irb-history -> /home/tom/Dropbox/.irb-history
+lrwxrwxrwx  1 tom  tom    33 2011-06-11 12:09 irbrc-dont-work -> /home/tom/Dropbox/irbrc-dont-work
+-rw-r--r--  1 tom  tom   694 2010-03-22 12:28 .isomaster
+drwxr-xr-x  4 tom  tom  4.0K 2010-07-02 14:26 .java/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-11 22:54 .kde/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:23 .kodos/
+-rw-------  1 tom  tom   750 2011-06-02 01:55 .lesshst
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 lf5 -> /home/tom/Dropbox/lf5/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .local/
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .macromedia/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-23 11:36 .matplotlib/
+drwx------  3 tom  tom  4.0K 2010-02-27 14:06 .mission-control/
+drwx------  4 tom  tom  4.0K 2010-02-27 12:54 .mozilla/
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 12:53 .nautilus/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-07 23:19 .openoffice.org/
+lrwxrwxrwx  1 tom  tom    32 2011-06-11 12:21 .PersonalBrain -> /home/tom/Dropbox/.PersonalBrain/
+drwxr-xr-x  2 tom  tom  4.0K 2010-08-14 13:49 .pip/
+drwx------  3 tom  tom  4.0K 2010-03-29 16:58 .pki/
+-rw-------  1 tom  tom   12K 2010-03-10 10:10 .polymaths.txt.swp
+-rw-r--r--  1 tom  tom    37 2010-06-10 13:45 .printer-groups.xml
+-rw-r--r--  1 tom  tom   715 2011-01-09 14:20 .profile
+-rw-r--r--  1 tom  tom   675 2011-01-02 12:46 .profile.bak
+lrwxrwxrwx  1 tom  tom    24 2011-04-19 13:25 Public -> /home/tom/Dropbox/Public/
+drwx------  2 tom  tom  4.0K 2011-06-10 14:48 .pulse/
+-rw-------  1 tom  tom   256 2010-02-27 02:22 .pulse-cookie
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:21 .qt/
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .rbmap -> /home/tom/Dropbox/.rbmap
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .rbrc -> /home/tom/Dropbox/.rbrc
+-rw-------  1 tom  tom  8.8K 2011-06-11 11:54 .recently-used.xbel
+drwxr-xr-x 24 tom  tom  4.0K 2011-06-01 10:05 .rvm/
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .rvmrc -> /home/tom/Dropbox/.rvmrc
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-10 15:09 scripts-in-progress/
+drwxr-xr-x  3 tom  tom  4.0K 2011-06-01 09:59 share/
+-rw-r--r--  1 tom  tom   469 2011-06-11 12:08 shared-config
+drwxr-xr-x  3 tom  tom  4.0K 2010-10-19 18:42 .shutter/
+drwx------  2 tom  tom  4.0K 2011-05-13 18:34 .ssh/
+-rw-r--r--  1 tom  tom     0 2010-02-27 10:24 .sudo_as_admin_successful
+-rw-------  1 tom  tom   16K 2011-06-07 17:24 .swm
+-rw-------  1 tom  tom   12K 2011-05-22 14:39 .swn
+-rw-------  1 tom  tom   12K 2010-03-13 10:40 .swo
+-rw-------  1 tom  tom   12K 2010-03-12 06:59 .swp
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:45 terminal.rb
+-rw-r--r--  1 tom  tom   204 2011-06-10 15:16 test-example-for-tzim.rb
+drwxr-xr-x  3 tom  tom  4.0K 2010-02-28 16:31 .themes/
+drwxr-xr-x  5 tom  tom  4.0K 2010-02-28 16:12 .thumbnails/
+-rw-r--r--  1 tom  tom   417 2011-05-17 15:44 todos
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .txtmap -> /home/tom/Dropbox/.txtmap
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .txtrc -> /home/tom/Dropbox/.txtrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 10:23 .update-manager-core/
+drwx------  2 tom  tom  4.0K 2010-03-15 13:44 .update-notifier/
+-rw-------  1 root root 4.6K 2011-06-07 17:23 .viminfo
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .vimmap -> /home/tom/Dropbox/.vimmap
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .vimperatorrc -> /home/tom/Dropbox/.vimperatorrc
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .vimrc -> /home/tom/Dropbox/.vimrc
+lrwxrwxrwx  1 tom  tom    25 2011-04-19 13:26 writing -> /home/tom/Dropbox/writing/
+-rw-r--r--  1 tom  tom    77 2011-06-07 17:31 .xmodmap
+-rw-r--r--  1 tom  tom   448 2011-01-06 03:25 .xrced
+-rw-------  1 tom  tom     0 2011-01-03 15:39 .xsel.log
+-rw-------  1 tom  tom   11K 2011-06-11 11:50 .xsession-errors
+-rw-------  1 tom  tom  5.1K 2011-06-10 13:50 .xsession-errors.old
+reason:~$ vim blah 
+reason:~$ ln -i --symbolic ~/Dropbox/.inputrc ~/.inputrc
+ln: replace `/home/tom/.inputrc'? y
+reason:~$ ln -i --symbolic ~/Dropbox/.inputrc ~/.rvmrc
+ln: replace `/home/tom/.rvmrc'? yes
+reason:~$ la
+total 552K
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .adobe/
+drwxr-xr-x  5 tom  tom  4.0K 2011-01-31 13:25 .anki/
+drwx------  2 tom  tom  4.0K 2011-06-01 10:02 .aptitude/
+-rw-r--r--  1 tom  tom   165 2011-06-01 11:47 .autotest
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_aliases -> /home/tom/Dropbox/.bash_aliases
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_history -> /home/tom/Dropbox/.bash_history
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:09 .bash_logout -> /home/tom/Dropbox/.bash_logout
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .bash_profile -> /home/tom/Dropbox/.bash_profile
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .bashrc -> /home/tom/Dropbox/.bashrc
+lrwxrwxrwx  1 tom  tom    29 2011-06-11 12:09 .blackboxrc -> /home/tom/Dropbox/.blackboxrc
+-rw-r--r--  1 tom  tom   163 2011-06-11 12:20 blah
+drwxr-xr-x  5 tom  tom  4.0K 2010-04-12 00:05 .blender/
+drwx------ 18 tom  tom  4.0K 2011-05-15 16:12 .cache/
+lrwxrwxrwx  1 tom  tom    13 2011-05-25 18:06 code -> writing/code//
+drwx------  3 tom  tom  4.0K 2010-05-19 18:27 .compiz/
+drwxr-xr-x 29 tom  tom  4.0K 2011-03-02 10:35 .config/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .dbus/
+drwxr-xr-x  2 tom  tom  4.0K 2011-02-04 15:53 .debtags/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 14:59 Desktop/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .dmrc -> /home/tom/Dropbox/.dmrc
+-rw-r--r--  1 tom  tom    58 2011-06-07 17:27 .dmrc.bak
+drwx------  4 tom  tom  4.0K 2011-06-09 11:53 Downloads/
+drwx------  3 tom  tom  4.0K 2011-06-11 12:24 .dropbox/
+drwx------ 18 tom  tom  4.0K 2011-06-11 12:10 Dropbox/
+drwxr-xr-x  5 tom  tom  4.0K 2011-05-25 14:29 .dropbox-dist/
+drwxr-xr-x  2 tom  tom  4.0K 2011-05-30 15:00 .dropbox-dist-new/
+drwx------  6 tom  tom  4.0K 2011-06-11 12:09 .e16/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-04 11:46 .Ephox/
+drwxr-xr-x  5 tom  tom  4.0K 2010-11-26 14:04 .eric4/
+-rw-------  1 tom  tom    16 2010-02-27 02:22 .esd_auth
+drwxr-xr-x  8 tom  tom  4.0K 2010-02-27 14:07 .evolution/
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 exo -> /home/tom/Dropbox/exo/
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .exrc -> /home/tom/Dropbox/.exrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-03-01 16:27 .FBReader/
+drwxr-xr-x  2 tom  tom  4.0K 2010-04-17 14:39 .flux/
+drwxr-xr-x  5 tom  tom  4.0K 2011-04-12 15:46 .fluxbox/
+-rw-r--r--  1 tom  tom   116 2011-05-18 11:50 .fold
+drwxr-xr-x  2 tom  tom  4.0K 2011-04-28 00:58 .fontconfig/
+drwx------  5 tom  tom  4.0K 2011-06-10 14:48 .gconf/
+drwx------  2 tom  tom  4.0K 2011-06-11 12:24 .gconfd/
+drwx------  4 tom  tom  4.0K 2010-08-03 12:19 .gegl-0.0/
+drwxr-xr-x  4 tom  tom  4.0K 2011-05-13 13:40 .gem/
+drwxr-xr-x 22 tom  tom  4.0K 2011-04-19 12:33 .gimp-2.6/
+drwxr-xr-x  8 tom  tom  4.0K 2011-05-19 09:43 .git/
+lrwxrwxrwx  1 tom  tom    28 2011-06-11 12:09 .gitconfig -> /home/tom/Dropbox/.gitconfig
+-rw-r--r--  1 tom  tom   843 2010-12-18 20:03 .gitk
+-rw-r-----  1 tom  tom     0 2011-05-30 15:05 .gksu.lock
+drwxr--r--  3 tom  tom  4.0K 2010-12-15 02:38 .glipper/
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:44 gnome
+drwx------ 15 tom  tom  4.0K 2011-06-11 11:54 .gnome2/
+drwx------  2 tom  tom  4.0K 2010-02-27 02:22 .gnome2_private/
+drwxr-xr-x  3 tom  tom  4.0K 2010-03-29 16:47 .gnote/
+drwx------  2 tom  tom  4.0K 2011-01-15 13:05 .gnupg/
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-07 17:30 .gstreamer-0.10/
+-rw-r--r--  1 tom  tom   283 2011-05-30 15:05 .gtk-bookmarks
+dr-x------  2 tom  tom     0 2011-06-10 14:48 .gvfs/
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .gvimrc -> /home/tom/Dropbox/.gvimrc
+drwxr-----  2 tom  tom  4.0K 2010-12-13 23:23 .hplip/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-16 18:07 .i4j_jres/
+-rwxr-xr-x  1 tom  tom  1.1K 2010-08-28 14:43 .iat.vim*
+-rw-------  1 tom  tom   97K 2011-06-10 14:48 .ICEauthority
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-28 16:30 .icons/
+lrwxrwxrwx  1 tom  tom    26 2011-06-11 12:26 .inputrc -> /home/tom/Dropbox/.inputrc
+-rw-r--r--  1 tom  tom   294 2010-10-11 15:13 .install4j
+drwxr-sr-x  3 tom  tom  4.0K 2011-05-08 23:31 .ipython/
+lrwxrwxrwx  1 tom  tom    30 2011-06-11 12:10 .irb-history -> /home/tom/Dropbox/.irb-history
+lrwxrwxrwx  1 tom  tom    33 2011-06-11 12:09 irbrc-dont-work -> /home/tom/Dropbox/irbrc-dont-work
+-rw-r--r--  1 tom  tom   694 2010-03-22 12:28 .isomaster
+drwxr-xr-x  4 tom  tom  4.0K 2010-07-02 14:26 .java/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-11 22:54 .kde/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:23 .kodos/
+-rw-------  1 tom  tom   750 2011-06-02 01:55 .lesshst
+lrwxrwxrwx  1 tom  tom    21 2011-04-19 13:25 lf5 -> /home/tom/Dropbox/lf5/
+drwx------  3 tom  tom  4.0K 2010-02-27 02:22 .local/
+drwx------  3 tom  tom  4.0K 2010-03-15 13:57 .macromedia/
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-23 11:36 .matplotlib/
+drwx------  3 tom  tom  4.0K 2010-02-27 14:06 .mission-control/
+drwx------  4 tom  tom  4.0K 2010-02-27 12:54 .mozilla/
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 12:53 .nautilus/
+drwxr-xr-x  3 tom  tom  4.0K 2010-04-07 23:19 .openoffice.org/
+lrwxrwxrwx  1 tom  tom    32 2011-06-11 12:21 .PersonalBrain -> /home/tom/Dropbox/.PersonalBrain/
+drwxr-xr-x  2 tom  tom  4.0K 2010-08-14 13:49 .pip/
+drwx------  3 tom  tom  4.0K 2010-03-29 16:58 .pki/
+-rw-------  1 tom  tom   12K 2010-03-10 10:10 .polymaths.txt.swp
+-rw-r--r--  1 tom  tom    37 2010-06-10 13:45 .printer-groups.xml
+-rw-r--r--  1 tom  tom   715 2011-01-09 14:20 .profile
+-rw-r--r--  1 tom  tom   675 2011-01-02 12:46 .profile.bak
+lrwxrwxrwx  1 tom  tom    24 2011-04-19 13:25 Public -> /home/tom/Dropbox/Public/
+drwx------  2 tom  tom  4.0K 2011-06-10 14:48 .pulse/
+-rw-------  1 tom  tom   256 2010-02-27 02:22 .pulse-cookie
+drwxr-xr-x  2 tom  tom  4.0K 2011-01-06 03:21 .qt/
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .rbmap -> /home/tom/Dropbox/.rbmap
+lrwxrwxrwx  1 tom  tom    23 2011-06-11 12:09 .rbrc -> /home/tom/Dropbox/.rbrc
+-rw-------  1 tom  tom  8.8K 2011-06-11 11:54 .recently-used.xbel
+drwxr-xr-x 24 tom  tom  4.0K 2011-06-01 10:05 .rvm/
+lrwxrwxrwx  1 tom  tom    26 2011-06-11 12:26 .rvmrc -> /home/tom/Dropbox/.inputrc
+drwxr-xr-x  2 tom  tom  4.0K 2011-06-10 15:09 scripts-in-progress/
+drwxr-xr-x  3 tom  tom  4.0K 2011-06-01 09:59 share/
+-rw-r--r--  1 tom  tom   469 2011-06-11 12:08 shared-config
+drwxr-xr-x  3 tom  tom  4.0K 2010-10-19 18:42 .shutter/
+drwx------  2 tom  tom  4.0K 2011-05-13 18:34 .ssh/
+-rw-r--r--  1 tom  tom     0 2010-02-27 10:24 .sudo_as_admin_successful
+-rw-------  1 tom  tom   16K 2011-06-07 17:24 .swm
+-rw-------  1 tom  tom   12K 2011-05-22 14:39 .swn
+-rw-------  1 tom  tom   12K 2010-03-13 10:40 .swo
+-rw-------  1 tom  tom   12K 2010-03-12 06:59 .swp
+-rw-r--r--  1 tom  tom  4.2K 2011-06-10 12:45 terminal.rb
+-rw-r--r--  1 tom  tom   204 2011-06-10 15:16 test-example-for-tzim.rb
+drwxr-xr-x  3 tom  tom  4.0K 2010-02-28 16:31 .themes/
+drwxr-xr-x  5 tom  tom  4.0K 2010-02-28 16:12 .thumbnails/
+-rw-r--r--  1 tom  tom   417 2011-05-17 15:44 todos
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .txtmap -> /home/tom/Dropbox/.txtmap
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .txtrc -> /home/tom/Dropbox/.txtrc
+drwxr-xr-x  2 tom  tom  4.0K 2010-02-27 10:23 .update-manager-core/
+drwx------  2 tom  tom  4.0K 2010-03-15 13:44 .update-notifier/
+lrwxrwxrwx  1 tom  tom    22 2011-06-11 12:25 .vim -> /home/tom/Dropbox/.vim/
+-rw-------  1 root root 4.6K 2011-06-07 17:23 .viminfo
+lrwxrwxrwx  1 tom  tom    25 2011-06-11 12:09 .vimmap -> /home/tom/Dropbox/.vimmap
+lrwxrwxrwx  1 tom  tom    29 2011-06-11 12:25 .vimperator -> /home/tom/Dropbox/.vimperator/
+lrwxrwxrwx  1 tom  tom    31 2011-06-11 12:09 .vimperatorrc -> /home/tom/Dropbox/.vimperatorrc
+lrwxrwxrwx  1 tom  tom    24 2011-06-11 12:09 .vimrc -> /home/tom/Dropbox/.vimrc
+lrwxrwxrwx  1 tom  tom    25 2011-04-19 13:26 writing -> /home/tom/Dropbox/writing/
+-rw-r--r--  1 tom  tom    77 2011-06-07 17:31 .xmodmap
+-rw-r--r--  1 tom  tom   448 2011-01-06 03:25 .xrced
+-rw-------  1 tom  tom     0 2011-01-03 15:39 .xsel.log
+-rw-------  1 tom  tom   11K 2011-06-11 12:24 .xsession-errors
+-rw-------  1 tom  tom  5.1K 2011-06-10 13:50 .xsession-errors.old
+reason:~$ cd Dropbox/
+
+  ===============================================================
+  = NOTICE:                                                     =
+  ===============================================================
+  = RVM has encountered a new or modified .rvmrc file in the    =
+  = current working directory. Resource files may execute       =
+  = arbitrary instructions, so RVM will not use an .rvmrc file  =
+  = that has not been explicitly marked as 'trusted.'           =
+  =                                                             =
+  = Examine the contents of this file carefully to be sure the  =
+  = contents are good before trusting it!                       =
+  =                                                             =
+  = You will now be given a chance to read the .rvmrc file      =
+  = before deciding whether or not its contents are safe. After =
+  = reading the file, you will be prompted 'yes or no' to set   =
+  = the trust level for this particular version of the file.    =
+  =                                                             =
+  = Note: You will be re-prompted each time the .rvmrc file     =
+  = changes, and may change the trust setting manually at any   =
+  = time.                                                       =
+  =                                                             =
+  = Press 'q' to exit the reader when finished reading the file =
+  ===============================================================
+
+  (press enter to review the .rvmrc file)
+
+  
+export rvm_path="/home/tom/.rvm"
+export rvm_pretty_print_flag=1
+
+
+  Examination of  /home/tom/Dropbox/.rvmrc is now complete.
+
+  ================================================================
+  = Trusting an .rvmrc file means that whenever you cd into this =
+  = directory, RVM will run this .rvmrc script in your shell.    =
+  =                                                              =
+  = If the contents of the file change, you will be re-prompted  =
+  = to review the file and adjust its trust settings. You may    =
+  = also change the trust settings manually at any time with     =
+  = the 'rvm rvmrc' command.                                     =
+  =                                                              =
+  = Now that you have examined the contents of the file, do you  =
+  = wish to trust this particular .rvmrc?                        =
+  ================================================================
+
+  (yes or no) > yes
+reason:~/Dropbox$ ls
+archive/  exo/       irbrc-dont-work  lf5/     pmsystem/  reason_package_list  social/
+data/     finances/  languages/       Photos/  Public/    Shared/              writing/
+reason:~/Dropbox$ la
+total 188K
+drwxr-xr-x 4 tom  tom  4.0K 2011-05-25 16:43 archive/
+-rw-r--r-- 1 tom  tom  1.3K 2011-06-09 09:31 .bash_aliases
+-rw------- 1 tom  tom   11K 2011-06-11 12:27 .bash_history
+-rw-r--r-- 1 tom  tom   220 2010-02-27 10:12 .bash_logout
+-rw-r--r-- 1 tom  tom   290 2011-06-01 09:59 .bash_profile
+-rw-r--r-- 1 tom  tom  1.3K 2011-06-07 17:26 .bashrc
+-rw-r--r-- 1 tom  tom    51 2011-02-22 08:16 .blackboxrc
+drwxr-xr-x 9 tom  tom  4.0K 2011-04-19 15:09 data/
+-rw-r--r-- 1 tom  tom    55 2011-06-10 14:48 .dmrc
+-rw-r--r-- 1 tom  tom    29 2011-06-10 14:49 .dropbox
+drwxr-xr-x 5 tom  tom  4.0K 2011-06-10 19:03 .dropbox.cache/
+drwxr-xr-x 6 tom  tom  4.0K 2011-06-11 11:38 exo/
+-rw-r--r-- 1 tom  tom   647 2011-05-26 23:17 .exrc
+drwxr-xr-x 5 tom  tom  4.0K 2011-05-26 09:32 finances/
+-rw-r--r-- 1 tom  tom   171 2011-06-01 11:02 .gitconfig
+-rw-r--r-- 1 tom  tom   403 2011-06-11 11:53 .gvimrc
+-rw-r--r-- 1 tom  tom    41 2010-04-04 13:08 .inputrc
+-rw-r--r-- 1 tom  tom   447 2011-06-11 11:32 .irb-history
+-rw-r--r-- 1 tom  tom   247 2011-06-10 16:06 irbrc-dont-work
+drwx------ 4 tom  tom  4.0K 2011-05-25 18:09 languages/
+drwxr-xr-x 7 tom  tom  4.0K 2011-06-01 14:20 lf5/
+drwxr-xr-x 4 tom  tom  4.0K 2011-06-11 11:46 .PersonalBrain/
+drwxr-xr-x 3 tom  tom  4.0K 2011-05-26 09:40 Photos/
+drwxr-xr-x 4 tom  tom  4.0K 2011-05-26 09:33 pmsystem/
+drwxr-xr-x 3 tom  tom  4.0K 2011-05-08 20:19 Public/
+-rw-r--r-- 1 tom  tom   291 2011-06-01 23:41 .rbmap
+-rw-r--r-- 1 tom  tom   882 2011-05-26 22:13 .rbrc
+-rw-r--r-- 1 root root  30K 2011-06-10 13:06 reason_package_list
+-rw-r--r-- 1 tom  tom    64 2011-06-01 10:00 .rvmrc
+drwxr-xr-x 2 tom  tom  4.0K 2011-01-25 13:36 Shared/
+drwxr-xr-x 6 tom  tom  4.0K 2011-05-25 18:06 social/
+-rw-r--r-- 1 tom  tom     0 2011-06-01 22:45 .txtmap
+-rw-r--r-- 1 tom  tom   588 2011-05-26 22:01 .txtrc
+drwxr-xr-x 5 tom  tom  4.0K 2011-06-10 14:49 .vim/
+-rw-r--r-- 1 tom  tom   459 2011-06-10 02:11 .vimmap
+drwx------ 3 tom  tom  4.0K 2010-07-02 15:16 .vimperator/
+-rw-r--r-- 1 tom  tom   158 2010-07-28 12:46 .vimperatorrc
+-rw-r--r-- 1 tom  tom  1.3K 2011-06-11 12:08 .vimrc
+drwxr-xr-x 7 tom  tom  4.0K 2011-05-25 16:44 writing/
+reason:~/Dropbox$ cd
+reason:~$ ls
+blah      Downloads/  gnome             Public@               shared-config             todos
+code@     Dropbox/    irbrc-dont-work@  scripts-in-progress/  terminal.rb               writing@
+Desktop/  exo@        lf5@              share/                test-example-for-tzim.rb
+reason:~$ mv scripts-in-progress/ /home/tom/Dropbox/scripts
+reason:~$ ln -i --symbolic Dropbox/scripts/ scripts
+reason:~$ ls
+blah      Downloads/  gnome             Public@   shared-config             todos
+code@     Dropbox/    irbrc-dont-work@  scripts@  terminal.rb               writing@
+Desktop/  exo@        lf5@              share/    test-example-for-tzim.rb
+reason:~$ rm shared-config blah 
+reason:~$ rm test-example-for-tzim.rb 
+reason:~$ mv terminal.rb scripts
+reason:~$ ls
+code@     Downloads/  exo@   irbrc-dont-work@  Public@   share/  writing@
+Desktop/  Dropbox/    gnome  lf5@              scripts@  todos
+reason:~$ cat gnome 
+def terminal( options )
+	%x{gnome-terminal} unless options
+	
+=begin
+gnome-terminal(1)                                            gnome-terminal(1) 
+
+NAME
+       gnome-terminal — is a terminal emulation application.
+
+SYNOPSIS
+       gnome-terminal  [-e,  --command=STRING]   [-x,  --execute ]  [--window-
+       with-profile=PROFILENAME]  [--tab-with-profile=PROFILENAME]  [--window-
+       with-profile-internal-id=PROFILEID]       [--tab-with-profile-internal-
+       id=PROFILEID]    [--role=ROLE]    [--show-menubar]     [--hide-menubar]
+       [--geometry=GEOMETRY]     [--disable-factory]     [-t,   --title=TITLE]
+       [--working-directory=DIRNAME]  [--usage]  [-?, --help]
+
+DESCRIPTION
+       GNOME Terminal is a terminal emulation application that you can use  to
+       perform the following actions:
+
+       Access a UNIX shell in the GNOME environment.
+
+       A shell is a program that interprets and executes the commands that you
+       type at a command line prompt.  When  you  start  GNOME  Terminal,  the
+       application  starts  the default shell that is specified in your system
+       account. You can switch to a different shell at any time.
+
+       Run any application that is designed to run on VT102, VT220, and  xterm
+       terminals.
+
+       GNOME  Terminal  emulates  the xterm program developed by the X Consor‐
+       tium. In turn, the xterm program emulates the DEC  VT102  terminal  and
+       also  supports  the DEC VT220 escape sequences. An escape sequence is a
+       series of characters that starts with the Esc character.
+
+       GNOME Terminal accepts all of the escape sequences that the  VT102  and
+       VT220  terminals  use  for functions such as positioning the cursor and
+       clearing the screen.
+
+OPTIONS
+       -e, --command=STRING
+                 Execute the argument to this option inside the terminal.
+
+       -x, --execute
+                 Execute the remainder of the command line inside  the  termi‐
+                 nal.
+
+       --window-with-profile=PROFILENAME
+                 Open  a  new  window containing a tab with the given profile.
+                 More than one of these options can be provided.
+
+       --tab-with-profile=PROFILENAME
+                 Open a tab in the window with the given  profile.  More  than
+                 one of these options can be provided, to open several tabs .
+
+       --window-with-profile-internal-id=PROFILEID
+                 Open a new window containing a tab with the given profile ID.
+                 Used internally to save sessions.
+
+       --tab-with-profile-internal-id=PROFILEID
+                 Open a tab in the window with the  given  profile  ID.   Used
+                 internally to save sessions.
+
+       --role=ROLE
+                 Set  the  role for the last-specified window; applies to only
+                 one window; can be specified once for each window you  create
+                 from the command line.
+
+       --show-menubar
+                 Turn  on  the menu bar for the last-specified window; applies
+                 to only one window; can be specified once for each window you
+                 create from the command line.
+
+       --hide-menubar
+                 Turn  off the menu bar for the last-specified window; applies
+                 to only one window; can be specified once for each window you
+                 create from the command line.
+
+       --geometry=GEOMETRY
+                 X geometry specification (see "X" man page), can be specified
+                 once per window to be opened.
+
+       --disable-factory
+                 Do not register with the activation name server, do  not  re-
+                 use an active terminal.
+
+       -t, --title=TITLE
+                 Set the terminal's title to TITLE.
+
+       --working-directory=DIRNAME
+                 Set the terminal's working directory to DIRNAME.
+
+       --usage   Display brief usage message.
+
+       -?, --help
+                 Show help message.
+
+AUTHOR
+       This  manual page was written by Christian Marillat marillat@debian.org
+       for the Debian GNU/Linux system (but may be used by others).
+
+
+
+                                                             gnome-terminal(1)
+=end
+reason:~$ rm gnome 
+reason:~$ ls
+code@     Downloads/  exo@              lf5@     scripts@  todos
+Desktop/  Dropbox/    irbrc-dont-work@  Public@  share/    writing@
+reason:~$ ls share/
+man/
+reason:~$ ls share/man/
+man1/
+reason:~$ ls share/man/man1/
+rvm.1  rvm.1.gz
+reason:~$ vim share/README
+reason:~$ vim
+reason:~$ tail .exrc
+" user-defined commands:
+" g K q V v 
+" ^A ^K ^O ^W ^X 
+" _ * \ =
+"
+" Keys that just kind of blow
+" ^J
+"
+" Debugging Map
+map F iDebugging Map: "I was defined in ~/.exrc"
+reason:~$ vim
+
+[No write since last change]
+
+Press ENTER or type command to continue
+reason:~$ ls
+code@     Downloads/  exo@              lf5@    Public@   share/  writing@
+Desktop/  Dropbox/    irbrc-dont-work@  output  scripts@  todos
+reason:~$ rm output 
+reason:~$ pmo
+reason:~/code/pmarg/pmonline$ autotest
+loading autotest/rspec2
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/pages_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/sessions_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/models/user_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/requests/layout_links_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/requests/users_spec.rb'
+.........................................................
+
+Finished in 6.95 seconds
+57 examples, 0 failures
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.91 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     AbstractController::ActionNotFound:
+       The action 'edit' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.8 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88738060__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88738060__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88738060__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 3.09 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+.......FFF....FFF
+
+Failures:
+
+  1) UsersController POST 'create' failure should not create a user
+     Failure/Error: post :create, :user => @attr
+     ActionView::Template::Error:
+       undefined local variable or method `object' for #<#<Class:0xa915b90>:0xa092090>
+     # ./app/views/shared/_error_messages.html.erb:7:in `_app_views_shared__error_messages_html_erb___788057335_88484080__431412440'
+     # ./app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/controllers/users_controller.rb:20:in `create'
+     # ./spec/controllers/users_controller_spec.rb:49:in `block (5 levels) in <top (required)>'
+     # ./spec/controllers/users_controller_spec.rb:48:in `block (4 levels) in <top (required)>'
+
+  2) UsersController POST 'create' failure should have the right title
+     Failure/Error: post :create, :user => @attr
+     ActionView::Template::Error:
+       undefined local variable or method `object' for #<#<Class:0xa915b90>:0x998e794>
+     # ./app/views/shared/_error_messages.html.erb:7:in `_app_views_shared__error_messages_html_erb___788057335_88484080__431412440'
+     # ./app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/controllers/users_controller.rb:20:in `create'
+     # ./spec/controllers/users_controller_spec.rb:53:in `block (4 levels) in <top (required)>'
+
+  3) UsersController POST 'create' failure should render the 'new' page
+     Failure/Error: post :create, :user => @attr
+     ActionView::Template::Error:
+       undefined local variable or method `object' for #<#<Class:0xa915b90>:0xaf60a40>
+     # ./app/views/shared/_error_messages.html.erb:7:in `_app_views_shared__error_messages_html_erb___788057335_88484080__431412440'
+     # ./app/views/users/new.html.erb:3:in `block in _app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___495961129_88621070__1001360286'
+     # ./app/controllers/users_controller.rb:20:in `create'
+     # ./spec/controllers/users_controller_spec.rb:57:in `block (4 levels) in <top (required)>'
+
+  4) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88964900__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  5) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88964900__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  6) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88964900__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 3 seconds
+17 examples, 6 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:47 # UsersController POST 'create' failure should not create a user
+rspec ./spec/controllers/users_controller_spec.rb:52 # UsersController POST 'create' failure should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:56 # UsersController POST 'create' failure should render the 'new' page
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88753440__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88753440__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88753440__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.99 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88735660__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88735660__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88735660__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.99 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88733320__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88733320__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88733320__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.95 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88715540__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88715540__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88715540__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+Finished in 2.99 seconds
+17 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFFFFFFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88796180__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88796180__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88796180__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+  4) UsersController PUT 'update' failure should render the 'edit' page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:116:in `block (4 levels) in <top (required)>'
+
+  5) UsersController PUT 'update' failure should have the right title
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:120:in `block (4 levels) in <top (required)>'
+
+  6) UsersController PUT 'update' success should change the user's attributes
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:132:in `block (4 levels) in <top (required)>'
+
+  7) UsersController PUT 'update' success should redirect to the user show page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:139:in `block (4 levels) in <top (required)>'
+
+  8) UsersController PUT 'update' success should have a flash message
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:144:in `block (4 levels) in <top (required)>'
+
+Finished in 3.26 seconds
+22 examples, 8 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+rspec ./spec/controllers/users_controller_spec.rb:115 # UsersController PUT 'update' failure should render the 'edit' page
+rspec ./spec/controllers/users_controller_spec.rb:119 # UsersController PUT 'update' failure should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:131 # UsersController PUT 'update' success should change the user's attributes
+rspec ./spec/controllers/users_controller_spec.rb:138 # UsersController PUT 'update' success should redirect to the user show page
+rspec ./spec/controllers/users_controller_spec.rb:143 # UsersController PUT 'update' success should have a flash message
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFFFFFFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88776110__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88776110__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88776110__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+  4) UsersController PUT 'update' failure should render the 'edit' page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:116:in `block (4 levels) in <top (required)>'
+
+  5) UsersController PUT 'update' failure should have the right title
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:120:in `block (4 levels) in <top (required)>'
+
+  6) UsersController PUT 'update' success should change the user's attributes
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:132:in `block (4 levels) in <top (required)>'
+
+  7) UsersController PUT 'update' success should redirect to the user show page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:139:in `block (4 levels) in <top (required)>'
+
+  8) UsersController PUT 'update' success should have a flash message
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:144:in `block (4 levels) in <top (required)>'
+
+Finished in 3.23 seconds
+22 examples, 8 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+rspec ./spec/controllers/users_controller_spec.rb:115 # UsersController PUT 'update' failure should render the 'edit' page
+rspec ./spec/controllers/users_controller_spec.rb:119 # UsersController PUT 'update' failure should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:131 # UsersController PUT 'update' success should change the user's attributes
+rspec ./spec/controllers/users_controller_spec.rb:138 # UsersController PUT 'update' success should redirect to the user show page
+rspec ./spec/controllers/users_controller_spec.rb:143 # UsersController PUT 'update' success should have a flash message
+================================================================================
+
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb'
+..............FFFFFFFF
+
+Failures:
+
+  1) UsersController GET 'edit' should be successful
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88772620__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:91:in `block (3 levels) in <top (required)>'
+
+  2) UsersController GET 'edit' should have the right title
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88772620__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:95:in `block (3 levels) in <top (required)>'
+
+  3) UsersController GET 'edit' should have a link to change the gravatar
+     Failure/Error: get :edit, :id	=> @user
+     ActionView::Template::Error:
+       undefined method `model_name' for NilClass:Class
+     # ./app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb__219853642_88772620__1001360286'
+     # ./spec/controllers/users_controller_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+  4) UsersController PUT 'update' failure should render the 'edit' page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:116:in `block (4 levels) in <top (required)>'
+
+  5) UsersController PUT 'update' failure should have the right title
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:120:in `block (4 levels) in <top (required)>'
+
+  6) UsersController PUT 'update' success should change the user's attributes
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:132:in `block (4 levels) in <top (required)>'
+
+  7) UsersController PUT 'update' success should redirect to the user show page
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:139:in `block (4 levels) in <top (required)>'
+
+  8) UsersController PUT 'update' success should have a flash message
+     Failure/Error: put :update, :id => @user, :user => @attr
+     AbstractController::ActionNotFound:
+       The action 'update' could not be found for UsersController
+     # ./spec/controllers/users_controller_spec.rb:144:in `block (4 levels) in <top (required)>'
+
+Finished in 3.31 seconds
+22 examples, 8 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:90 # UsersController GET 'edit' should be successful
+rspec ./spec/controllers/users_controller_spec.rb:94 # UsersController GET 'edit' should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:98 # UsersController GET 'edit' should have a link to change the gravatar
+rspec ./spec/controllers/users_controller_spec.rb:115 # UsersController PUT 'update' failure should render the 'edit' page
+rspec ./spec/controllers/users_controller_spec.rb:119 # UsersController PUT 'update' failure should have the right title
+rspec ./spec/controllers/users_controller_spec.rb:131 # UsersController PUT 'update' success should change the user's attributes
+rspec ./spec/controllers/users_controller_spec.rb:138 # UsersController PUT 'update' success should redirect to the user show page
+rspec ./spec/controllers/users_controller_spec.rb:143 # UsersController PUT 'update' success should have a flash message
+================================================================================
+
+^CInterrupt a second time to quit
+^Creason:~/code/pmarg/pmonline$ autotest
+loading autotest/rspec2
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/bin/ruby -rrubygems -S /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/rspec-core-2.6.4/bin/rspec --tty '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/pages_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/sessions_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/controllers/users_controller_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/models/user_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/requests/layout_links_spec.rb' '/home/tom/Dropbox/writing/code/pmarg/pmonline/spec/requests/users_spec.rb'
+.................................FFF.............................
+
+Failures:
+
+  1) UsersController PUT 'update' success should change the user's attributes
+     Failure/Error: @user.name.should == @attr[:name]
+       expected: "user@example.org"
+            got: "Tom Henderson" (using ==)
+     # ./spec/controllers/users_controller_spec.rb:134:in `block (4 levels) in <top (required)>'
+
+  2) UsersController PUT 'update' success should redirect to the user show page
+     Failure/Error: response.should redirect_to( user_path( @user ))
+       Expected block to return true value.
+     # ./spec/controllers/users_controller_spec.rb:140:in `block (4 levels) in <top (required)>'
+
+  3) UsersController PUT 'update' success should have a flash message
+     Failure/Error: flash[:success].should =~ /updated/
+       expected: /updated/
+            got: nil (using =~)
+     # ./spec/controllers/users_controller_spec.rb:145:in `block (4 levels) in <top (required)>'
+
+Finished in 7.17 seconds
+65 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/controllers/users_controller_spec.rb:131 # UsersController PUT 'update' success should change the user's attributes
+rspec ./spec/controllers/users_controller_spec.rb:138 # UsersController PUT 'update' success should redirect to the user show page
+rspec ./spec/controllers/users_controller_spec.rb:143 # UsersController PUT 'update' success should have a flash message
+================================================================================
+
