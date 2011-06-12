@@ -364,9 +364,6 @@ list-style-image:url(images/li-bullet.png);
 list-style-position:inside;
 }
 
-
-
-
 header[role=banner]{
 position:relative;
 }
@@ -478,12 +475,6 @@ font-size:2em;
 color:#000;
 text-align:center;
 }
-
-
-
-
-
-
 
 p{
 margin:0 0 1.5em;
