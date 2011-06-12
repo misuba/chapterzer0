@@ -9,22 +9,16 @@ describe "LayoutLinks" do
 		get '/about'
 		response.should have_selector('title', :content => "About")
 	end
-	it "should have a Contact page at /contact" do
-		get '/contact'
-		response.should have_selector('title', :content => "Content")
-	end
-
-	it "should have a Merch page at /merch" do
-		get '/merch'
-		response.should have_selector('title', :content => "Merch")
-	end
-
-	# Not excluding the signup page yet, even though it will be 
-	# commented out at some point. Backerz onlee!
 	it "should have a Signup page at '/signup'" do
 		get '/signup'
 		response.should have_selector('title', :content => "Sign up")
 	end
+
+	it "should have a Contact page at /contact"
+	it "should have a Merch page at /merch" 
+
+	# Not excluding the signup page yet, even though it will be 
+	# commented out at some point. Backerz onlee!
 
 
 

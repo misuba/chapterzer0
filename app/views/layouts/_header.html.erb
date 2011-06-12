@@ -1,25 +1,41 @@
 <header role="banner">
-		<hgroup>
-	<%= link_to logo, root_path %>
-	<h1><a href="http://www.punkmathematics.com/" title="punk mathematics" rel="home">Punk M<span>a</span>thematics</a></h1>
-	<h2>the game theory of gettin it on&#8230;</h2>
-		</hgroup>
+	<hgroup>
+		<h1><a href="http://www.punkmathematics.com/" 
+						title="punk mathematics" 
+						rel="home">Punk M<span>a</span>thematics </a></h1>
+		<h2><%= "the gAme theory of getting it on" %></h2>
+		<%= link_to logo, root_path %>
+	</hgroup>
 
-	<nav role="navigation">
-	  		<a href="#content" title="Skip to content">Skip to content</a>
-				<div class="menu"><ul><li class="current_page_item"><a href="http://www.punkmathematics.com/" title="Home">Home</a></li><li class="page_item page-item-5"><a href="http://www.punkmathematics.com/about" title="About">About</a></li><li class="page_item page-item-80"><a href="http://www.punkmathematics.com/contact" title="Contact">Contact</a></li><li class="page_item page-item-21"><a href="http://www.punkmathematics.com/merch" title="Merch!">Merch!</a></li></ul></div>
+<nav role="navigation">
+	<a href="#content" title="Skip to content">Skip to content</a>
+		<div class="menu">
+			<ul>
+				<li class="current_page_item">
+					<a href="http://www.punkmathematics.com/" title="Home">Home</a></li>
+				<li class="page_item page-item-5">
+					<a href="http://www.punkmathematics.com/about" title="About">About</a></li>
+				<li class="page_item page-item-80">
+					<a href="http://www.punkmathematics.com/contact" title="Contact">Contact</a></li>
+				<li class="page_item page-item-21">
+					<a href="http://www.punkmathematics.com/merch" title="Merch!">Merch!</a></li>
+
+				<li class="page_item page-item-21">
+					<a href="http://www.punkmathematics.com/merch" title="Merch!">Merch!</a></li>
+				<li class="page_item page-item-21">
+					<a href="http://www.punkmathematics.com/merch" title="Merch!">Merch!</a></li>
+
+				</ul>
+			</div>
 	</nav>
 	<nav class="round">
 		<ul>
 
 			<li><%= link_to "Home", root_path %></li>
-
 			<% if signed_in? %>
 				<li><%= link_to "Profile", current_user %>
 				<li><%= link_to "Settings", edit_user_path( current_user ) %>
 			<% end %>
-
-			<li><%= link_to "Help", help_path %></li>
 
 			<% if signed_in? %>
 				<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
