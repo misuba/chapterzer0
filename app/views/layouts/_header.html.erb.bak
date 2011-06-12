@@ -1,14 +1,17 @@
-<header role="banner">
+	<header role="banner">
 		<hgroup>
-	<%= link_to logo, root_path %>
 	<h1><a href="http://www.punkmathematics.com/" title="punk mathematics" rel="home">Punk M<span>a</span>thematics</a></h1>
 	<h2>the game theory of gettin it on&#8230;</h2>
 		</hgroup>
+	</header>
 
 	<nav role="navigation">
 	  		<a href="#content" title="Skip to content">Skip to content</a>
 				<div class="menu"><ul><li class="current_page_item"><a href="http://www.punkmathematics.com/" title="Home">Home</a></li><li class="page_item page-item-5"><a href="http://www.punkmathematics.com/about" title="About">About</a></li><li class="page_item page-item-80"><a href="http://www.punkmathematics.com/contact" title="Contact">Contact</a></li><li class="page_item page-item-21"><a href="http://www.punkmathematics.com/merch" title="Merch!">Merch!</a></li></ul></div>
 	</nav>
+
+<header>
+	<%= link_to logo, root_path %>
 	<nav class="round">
 		<ul>
 
