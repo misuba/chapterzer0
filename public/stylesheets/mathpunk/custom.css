@@ -51,7 +51,6 @@ border-spacing: 0;
 
 .alert { background:red; color:white } /* 'alert' has a basic style, since it's useful to have it standing out for testing purposes. */
 
-
 body{
 font-size:75%;
 }
@@ -364,9 +363,6 @@ list-style-image:url(images/li-bullet.png);
 list-style-position:inside;
 }
 
-
-
-
 header[role=banner]{
 position:relative;
 }
@@ -478,11 +474,6 @@ font-size:2em;
 color:#000;
 text-align:center;
 }
-
-
-
-
-
 
 
 p{
