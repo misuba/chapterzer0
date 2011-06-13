@@ -1,11 +1,14 @@
 <footer>
 	<nav class="round">
 		<ul>
-			<li><%= link_to "About", about_path %></li>
-			<li><a href="http://punkmathematics.com">News</a></li>
+			<li class="current_page_item">
+				<a href="http://www.punkmathematics.com/" title="Blog">Blog</a></li>
+			<li class="page_item page-item-5">
+				<%= link_to_pm "about" %>
+			<li class="page_item page-item-80">
+				<%= link_to_pm "contact" %>
+			<li class="page_item page-item-21">
+				<%= link_to_pm "merch" %>
 		</ul>
 	</nav>
-</footer>
-<footer role="contentinfo">
-Copyright 2010&ndash;2011<span><a href="http://tekbot.net/">Hosted by Tekbot Networks</a>, <a href="http://wordpress.org/" rel="generator">powered by WordPress</a></span>
 </footer>

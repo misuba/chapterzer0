@@ -1,24 +1,15 @@
 <header role="banner">
-<nav>
-			<ul>
-			<li><%= link_to "Datamancy", root_path, :class => "page_item page-item-80" %></li>
-				<li class="current_page_item">
-					<a href="http://www.punkmathematics.com/" title="Main">Main</a></li>
-				<li class="page_item page-item-5">
-					<%= link_to_pm "about" %>
-				<li class="page_item page-item-80">
-					<%= link_to_pm "contact" %>
-				<li class="page_item page-item-21">
-					<%= link_to_pm "merch" %>
-			<% if signed_in? %>
-				<li><%= link_to "Profile", current_user %>
-				<li><%= link_to "Settings", edit_user_path( current_user ) %>
-			<% end %>
-			<% if signed_in? %>
-				<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
-			<% else %>
-				<li><%= link_to "Sign in", signin_path %></li>
-			<% end %>
-		</ul>
-</nav>
+	<nav>
+		<ul>
+		<% if signed_in? %>
+			<li><%= link_to "Profile", current_user %>
+			<li><%= link_to "Settings", edit_user_path( current_user ) %>
+			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+		<% else %>
+			<li>
+			<a style="color:red;text-decoration:underline" href=<%= signin_path %>>Sign in</a>
+			</li>
+		<% end %>
+	</ul>
+	</nav>
 </header>
