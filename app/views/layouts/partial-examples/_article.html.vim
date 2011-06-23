@@ -41,14 +41,14 @@ set wrapmargin=4
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/Dropbox/writing/code/pmarg/pmonline/app/views/layouts
+cd ~/Dropbox/writing/code/pmarg/pmonline/app/views/layouts/partial-examples
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 punkmathematics.html
-args punkmathematics.html
-edit punkmathematics.html
+badd +0 _article.html
+args _article.html
+edit _article.html
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -151,31 +151,20 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=4
 silent! normal! zE
-3,65fold
-68,77fold
-67,78fold
-79,90fold
-92,424fold
-426,428fold
+3,19fold
+20,21fold
+22,27fold
 3
 normal zc
-67
-normal zo
-68
+20
 normal zc
-67
+22
 normal zc
-79
-normal zc
-92
-normal zc
-426
-normal zc
-let s:l = 79 - ((78 * winheight(0) + 11) / 23)
+let s:l = 1 - ((0 * winheight(0) + 11) / 23)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-79
+1
 normal! 0
 tabnext 1
 if exists('s:wipebuf')

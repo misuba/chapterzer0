@@ -9,15 +9,16 @@ describe "LayoutLinks" do
 		get '/about'
 		response.should have_selector('title', :content => "About")
 	end
-	it "should have a Help page at '/help'" do
-		get '/help'
-		response.should have_selector('title', :content => "Help")
-	end
-	it "should have a signup page at '/signup'" do
+	it "should have a Signup page at '/signup'" do
 		get '/signup'
 		response.should have_selector('title', :content => "Sign up")
 	end
 
+	it "should have a Contact page at /contact"
+	it "should have a Merch page at /merch" 
+
+	# Not excluding the signup page yet, even though it will be 
+	# commented out at some point. Backerz onlee!
 	describe "when not signed in" do
 		it "should have a sign in link" do
 			visit root_path
@@ -25,7 +26,6 @@ describe "LayoutLinks" do
 																		:content =>  "Sign in")
 		end
 	end
-
 	describe "when signed in" do
 		before(:each) do 
 			@user = Factory(:user)
