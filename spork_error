@@ -1,0 +1,30 @@
+
+NOTE: Gem.latest_load_paths is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem.latest_load_paths called from /home/tom/.rvm/gems/ruby-1.9.2-p180/gems/spork-0.8.5/lib/spork.rb:112.
+NOTE: Gem.all_partials is deprecated with no replacement. It will be removed on or after 2011-10-01.
+Gem.all_partials called from /home/tom/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/site_ruby/1.9.1/rubygems.rb:600.
+
+undefined method `specifications' for "/home/tom/.rvm/gems/ruby-1.9.2-p180":String (NoMethodError)
+
+cd /home/tom/.rvm/rubies/ruby-1.9.2-p180
+rubygems errors
+./lib/ruby/site_ruby/1.9.1/rubygems.rb:425:in `block in each_load_path'
+./lib/ruby/site_ruby/1.9.1/rubygems.rb:423:in `each'
+/home/tom/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/site_ruby/1.9.1/rubygems.rb:423:in `each_load_path'
+./lib/ruby/site_ruby/1.9.1/rubygems.rb:587:in `block in latest_load_paths'
+./lib/ruby/site_ruby/1.9.1/rubygems.rb:586:in `each'
+./lib/ruby/site_ruby/1.9.1/rubygems.rb:586:in `latest_load_paths'
+./lib/ruby/site_ruby/1.9.1/rubygems/deprecate.rb:62:in `block (2 levels) in deprecate'
+
+spork gem errors
+./gems/spork-0.8.5/lib/spork.rb:112:in `other_spork_gem_load_paths'
+/home/tom/.rvm/gems/ruby-1.9.2-p180/gems/spork-0.8.5/lib/spork.rb:105:in `detect_and_require'
+./gems/spork-0.8.5/lib/spork/test_framework.rb:167:in `<top (required)>'
+./gems/spork-0.8.5/lib/spork/runner.rb:48:in `find_test_framework'
+./gems/spork-0.8.5/lib/spork/runner.rb:56:in `run'
+./gems/spork-0.8.5/lib/spork/runner.rb:9:in `run'
+./gems/spork-0.8.5/bin/spork:10:in `<top (required)>'
+
+spork bin errors
+./bin/spork:19:in `load'
+./bin/spork:19:in `<main>'
