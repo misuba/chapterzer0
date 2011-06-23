@@ -19,10 +19,6 @@ describe "LayoutLinks" do
 
 	# Not excluding the signup page yet, even though it will be 
 	# commented out at some point. Backerz onlee!
-
-
-
-
 	describe "when not signed in" do
 		it "should have a sign in link" do
 			visit root_path
