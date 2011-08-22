@@ -6,8 +6,24 @@ Pmonline::Application.routes.draw do
 	match '/signup', :to => 'users#new'
 	match '/signin', :to => 'sessions#new'
 	match '/signout', :to => 'sessions#destroy'
-  match '/about', :to => 'pages#about'
-  match '/help', :to => 'pages#help'
+
+  match '/about_the_author', :to => 'pages#about_the_author'
+  match '/about_the_book', :to => 'pages#about_the_book'
+  match '/blog', :to => 'pages#blog'
+  match '/buy_things', :to => 'pages#buy_things'
+  match '/contact', :to => 'pages#contact'
+  match '/get_involved', :to => 'pages#get_involved'
+  match '/home', :to => 'pages#home'
+  match '/mathpunx', :to => 'pages#mathpunx'
+  match '/networks', :to => 'pages#networks'
+
+	# Boy, I wanted this to work...
+=begin
+static_pages = %w[about_the_author about_the_book blog buy_things contact get_involved home mathpunx_login networks]
+	static_pages.each do |pagename|
+		match '/#{ pagename }', :to => 'pages##{ pagename }'
+	end
+=end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

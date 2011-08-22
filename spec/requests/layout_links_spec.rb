@@ -14,8 +14,6 @@ describe "LayoutLinks" do
 		response.should have_selector('title', :content => "Sign up")
 	end
 
-	it "should have a Contact page at /contact"
-	it "should have a Merch page at /merch" 
 
 	# Not excluding the signup page yet, even though it will be 
 	# commented out at some point. Backerz onlee!
