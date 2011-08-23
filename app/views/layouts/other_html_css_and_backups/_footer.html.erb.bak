@@ -1,0 +1,15 @@
+<!-- I don't understand this file. What's up with the crazy classes? -->
+<footer>
+	<nav class="round">
+		<ul>
+			<li class="current_page_item">
+				<a href="http://www.punkmathematics.com/" title="Blog">Blog</a></li>
+			<li class="page_item page-item-5">
+				<%= link_to_pm "about" %>
+			<li class="page_item page-item-80">
+				<%= link_to_pm "contact" %>
+			<li class="page_item page-item-21">
+				<%= link_to_pm "merch" %>
+		</ul>
+	</nav>
+</footer>
