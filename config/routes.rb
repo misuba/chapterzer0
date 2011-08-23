@@ -7,8 +7,6 @@ Pmonline::Application.routes.draw do
 	match '/signin', :to => 'sessions#new'
 	match '/signout', :to => 'sessions#destroy'
 
-  match '/about_the_author', :to => 'pages#about_the_author'
-  match '/about_the_book', :to => 'pages#about_the_book'
   match '/blog', :to => 'pages#blog'
   match '/buy_things', :to => 'pages#buy_things'
   match '/contact', :to => 'pages#contact'

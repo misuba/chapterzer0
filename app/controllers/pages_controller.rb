@@ -3,24 +3,8 @@ class PagesController < ApplicationController
 		@title = "Home"
   end
 
-  def about_the_book
-		@title = "About the Book"
-  end
-
-  def about_the_author
-		@title = "About the Author"
-  end
-
-	def networks
-		@title = "Networks"
-	end
-
-	def mathpunx
-		@title = "Oi, mathpunx!"
-	end
-
-	def get_involved
-		@title = "Get Involved"
+	def sign_in
+		@title = "Sign Up/Sign In"
 	end
 
 	# redirecting for now
