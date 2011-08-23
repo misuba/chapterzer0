@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+	before_filter :authenticate, :only =>  [:index, :edit, :update, :destroy]
+
   def home
 		@title = "Home"
   end
@@ -7,7 +9,6 @@ class PagesController < ApplicationController
 		@title = "Sign Up/Sign In"
 	end
 
-	# redirecting for now
   def buy_things
 		@title = "Buy Things"
 		redirect_to "http://www.punkmathematics.com/merch"

@@ -7,25 +7,6 @@ describe "LayoutLinks" do
 		response.should have_selector('title', :content => "Home")
 	end
 
-	it "should have an About the Author page at '/about_the_author'" do
-		get '/about_the_author'
-		response.should have_selector('title', :content => "Author")
-	end
-
-	it "should have an About the Book page at '/about_the_book'" do
-		get '/about_the_book'
-		response.should have_selector('title', :content => "Book")
-	end
-
-	it "should have a Contact page at '/contact'" do
-	end
-
-	it "should have a Buy Things page at '/buy_things'" do
-	end
-
-	it "should have a Blog page at '/blog'" do
-	end
-
 	describe "when not signed in" do
 
 		it "should have a sign in link" do
