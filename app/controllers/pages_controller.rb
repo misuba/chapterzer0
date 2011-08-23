@@ -15,7 +15,6 @@ class PagesController < ApplicationController
 		@title = "Networks"
 	end
 
-
 	def mathpunx
 		@title = "Oi, mathpunx!"
 	end
@@ -27,7 +26,7 @@ class PagesController < ApplicationController
 	# redirecting for now
   def buy_things
 		@title = "Buy Things"
-		redirect_to "http://www.punkmathematics.com/buy"
+		redirect_to "http://www.punkmathematics.com/merch"
   end
 
 	def contact
