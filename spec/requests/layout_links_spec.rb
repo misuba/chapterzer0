@@ -1,30 +1,42 @@
 require 'spec_helper'
 
 describe "LayoutLinks" do
+
 	it "should have a Home page at '/'" do
 		get '/'
 		response.should have_selector('title', :content => "Home")
 	end
-	it "should have a About page at '/about'" do
-		get '/about'
-		response.should have_selector('title', :content => "About")
-	end
-	it "should have a Signup page at '/signup'" do
-		get '/signup'
-		response.should have_selector('title', :content => "Sign up")
+
+	it "should have an About the Author page at '/about_the_author'" do
+		get '/about_the_author'
+		response.should have_selector('title', :content => "Author")
 	end
 
+	it "should have an About the Book page at '/about_the_book'" do
+		get '/about_the_book'
+		response.should have_selector('title', :content => "Book")
+	end
 
-	# Not excluding the signup page yet, even though it will be 
-	# commented out at some point. Backerz onlee!
+	it "should have a Contact page at '/contact'" do
+	end
+
+	it "should have a Buy Things page at '/buy_things'" do
+	end
+
+	it "should have a Blog page at '/blog'" do
+	end
+
 	describe "when not signed in" do
+
 		it "should have a sign in link" do
 			visit root_path
 			response.should have_selector( "a", :href => signin_path,
 																		:content =>  "Sign in")
 		end
 	end
+
 	describe "when signed in" do
+
 		before(:each) do 
 			@user = Factory(:user)
 			visit signin_path
@@ -32,11 +44,13 @@ describe "LayoutLinks" do
 			fill_in :password,		:with => @user.password
 			click_button
 		end
+
 		it "should have a signout link" do
 			visit root_path
 			response.should have_selector("a", :href => signout_path,
 																	:content => "Sign out")
 		end
+			
 		it "should have a profile link" do
 			visit root_path
 			response.should have_selector( "a", :href => user_path(@user),
