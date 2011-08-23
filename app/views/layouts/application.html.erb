@@ -8,12 +8,14 @@
 	</head>
 	<body>
 		<%= render 'layouts/header' %>
+		
 
 		<section>
 			<% flash.each do |key, value| %>
 				<%= content_tag(:div, value, :class => "flash #{key}") %>
 			<% end %>
-			<article>
+			<article> <!-- No, I don't really know what an "article" is, but 
+								I think it's part of FStorr's CSS. -->
 			<%= yield %>
 			</article>
 		</section>

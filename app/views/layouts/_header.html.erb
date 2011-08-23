@@ -1,15 +1,3 @@
 <header role="banner">
-	<nav>
-		<ul>
-		<% if signed_in? %>
-			<li><%= link_to "Profile", current_user %>
-			<li><%= link_to "Settings", edit_user_path( current_user ) %>
-			<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
-		<% else %>
-			<li>
-			<a style="color:red;text-decoration:underline" href=<%= signin_path %>>Sign in</a>
-			</li>
-		<% end %>
-	</ul>
-	</nav>
+<%= render "layouts/backer_links" %>
 </header>

@@ -10,7 +10,7 @@ module ApplicationHelper
 	end
 
 	def logo
-		image_tag( "logo.png", :alt => "PMOnline", :class => "round" )
+		image_tag( "logo.png", :alt => "chapterzer0", :class => "round" )
 	end
 
 	def tagline
@@ -20,9 +20,5 @@ module ApplicationHelper
 								"advertising is malware"]
 		r = rand(slogans.length)
 		slogans[r]
-	end
-
-	def link_to_pm( page )
-		link_to page.capitalize, "http://www.punk.mathematics.com/#{page}"
 	end
 end
